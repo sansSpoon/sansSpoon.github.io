@@ -1,0 +1,36 @@
+# Site Settings
+title:               "Jekylton"
+tagline:             "Jekyll > Framework > Skeleton > Jekylton"
+url:                 "https://github.com/sansSpoon/jekylton"
+baseurl:             ""
+description:         "Jekylton is a skeleton-like-framework for Jekyll. It was built as a progressive alternative to the default theme for Jekyll, dropping support for outdated browsers while improving semantic structure and accessibility."
+
+author:
+  name:              "sansSpoon"
+  email:             sans.spoon@gmail.com
+#  github:            
+#  codepen:           
+#  stackExchange:     
+
+# Custom vars
+version:             1.0
+#debug:               
+#analytics_id:       
+contentPath:         "/content" #for richmedia content
+
+# Build settings
+sass:
+  sass_dir:          _sass
+  style:             nested #nested|compact|expanded|compressed
+  sourcemap:         true
+
+permalink:           pretty
+markdown:            kramdown
+
+plugins:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+include:
+  - _pages

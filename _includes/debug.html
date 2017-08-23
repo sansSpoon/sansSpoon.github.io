@@ -1,0 +1,18 @@
+<!-- Use this page to insert Jekyll Variables and messages etc, inserted onto the top of the html element -->
+<!-- Turn on in the config file - debug: 1 -->
+
+<!-- {{ jekyll.environment }} -->
+
+<!--<h1>pages</h1>
+{{ site.pages }}-->
+
+<!-- <h1>posts</h1>
+{{ site.pages | json }} -->
+
+
+<p>
+{% assign myPosts = site.posts | map: "path" %}
+{{ myPosts | json }}
+</p><p>
+{% assign myPages = site.pages | map: "path" %}
+{{ myPages | json }}</p>

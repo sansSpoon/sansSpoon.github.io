@@ -1,0 +1,75 @@
+// --------
+// ! Reset
+// ========
+
+* {
+	box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: $root-font-family;
+	font-size: $root-font-size;
+	line-height: $root-line-height;
+
+	@include media-query($small) {
+		font-size: $root-font-size * 1.25;
+	};
+	
+	@include media-query($medium) {
+		font-size: $root-font-size * 1.5;
+	};
+	
+	@include media-query($large) {
+		font-size: $root-font-size * 2;
+	};
+}
+
+body {
+	color: $color-txt;
+	background-color: darken($color-bg,15%);
+	text-rendering: optimizeLegibility;
+	font-feature-settings: "kern" 1, "liga" 1, "dlig" 1, "swsh" 1;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	color: $color-link;
+	text-decoration: none;
+
+	// `:focus` is linked to `:hover` for basic accessibility
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+table {
+	width: 100%;
+	border: 1px solid $color-primary;
+	border-collapse: collapse;
+	margin-top: .25em;
+	margin-bottom: .25em;
+}
+
+td,
+th {
+  border: 1px solid $color-primary;
+}
+
+pre {
+	white-space: pre-wrap;
+}

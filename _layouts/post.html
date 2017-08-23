@@ -1,0 +1,47 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	
+	<header class="post-header">
+		<h1 class="post-title" itemprop="name headline">
+			<a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark" title="Permanent Link to {{ post.url | relative_url }}">{{ page.title | escape }}</a>
+		</h1>
+		
+		<div class="post-meta" aria-label="Post Metadata">
+			<time class="post-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%Y%m%d" }}</time>
+			{% if page.tags.size > 0 %}
+			<ul class="post-tags">
+				{% for tag in page.tags %}
+					<li><a href="{{ site.baseurl }}/tags/index.html#{{ tag | cgi_escape }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a></li>
+					{% unless forloop.last %}{% endunless %}
+				{% endfor %}
+			</ul>
+			{% endif %}
+			{% if page.author %}
+			<p itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></p>
+			{% endif %}
+		</div>
+	</header>
+	
+	<section itemprop="articleBody">
+		{{ content }}
+	</section>
+	
+</article>
+
+{% if site.related_posts != empty %}
+<aside class="related" aria-label="Related Posts">
+	<h3>Related posts</h3>
+	<ul class="related-posts">
+		{% for post in site.related_posts limit:3 %}
+		<li>
+			<a href="{{ site.baseurl }}{{ post.url }}">
+				{{ post.title }}
+				<small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+</aside>
+{% endif %}
