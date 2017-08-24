@@ -1,21 +1,21 @@
 # Site Settings
-title:               "Jekylton"
-tagline:             "Jekyll > Framework > Skeleton > Jekylton"
-url:                 "https://github.com/sansSpoon/jekylton"
+title:               "J. David Maclean"
+tagline:             "Full Stack Jack"
+url:                 "https://jdavidmaclean.com"
 baseurl:             ""
-description:         "Jekylton is a skeleton-like-framework for Jekyll. It was built as a progressive alternative to the default theme for Jekyll, dropping support for outdated browsers while improving semantic structure and accessibility."
+description:         "J. David Maclean > A motivated solutions-driven technical thinker with a creative history and an aptitude for tutoring. Passionate about designing systems, managing projects and communicating ideas in the online, education, design, and publishing markets."
 
 author:
-  name:              "sansSpoon"
-  email:             sans.spoon@gmail.com
+  name:              "J. David Maclean"
+  email:             "j.david.maclean@gmail.com"
 #  github:            
 #  codepen:           
 #  stackExchange:     
 
 # Custom vars
 version:             1.0
-#debug:               
-#analytics_id:       
+#debug:              
+analytics_id:        UA-92019002-1
 contentPath:         "/content" #for richmedia content
 
 # Build settings
@@ -26,9 +26,19 @@ sass:
 
 permalink:           pretty
 markdown:            kramdown
+highlighter:         none
+#paginate:            1000
+
+kramdown:
+  auto_ids:          true
+  syntax_highlighter_opts:
+    disable :        true
 
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+# - jekyll-paginate
+# - jekyll-gist
 exclude:
   - Gemfile
   - Gemfile.lock
