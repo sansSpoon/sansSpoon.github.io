@@ -27,7 +27,7 @@ html {
 	};
 	
 	@include media-query($large) {
-		font-size: $root-font-size * 2;
+		font-size: $root-font-size * 2.5;
 	};
 }
 

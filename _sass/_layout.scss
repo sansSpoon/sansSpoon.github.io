@@ -11,14 +11,16 @@ main {
 	background-color: $color-bg;
 	
 	@include media-query($small) {
-		max-width: 30rem;
-	}
+		max-width: 34rem; // 16 * 1.25 * 34 // 680px
+	} // $small: 30em; // 480px min
+
 	@include media-query($medium) {
-		max-width: 60rem;
-	}
+		max-width: 44rem; // 16 * 1.5 * 44 // 1056px
+	} // $medium: 60em; // 960px min
+
 	@include media-query($large) {
-		max-width: 90rem;
-	}
+		max-width: 37rem; // 16 * 2.5 * 37 // 1480px
+	} // $large: 90em; // 1440 px min
 }
 
 .site-header {
