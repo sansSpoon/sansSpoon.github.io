@@ -1,0 +1,74 @@
+main {
+	overflow: auto;
+}
+
+.site-header, .site-content, .site-footer {
+	max-width: 20rem;
+	padding-left:  1.5rem;
+	padding-right: 1.5rem;
+	margin-left:  auto;
+	margin-right: auto;
+	background-color: $color-bg;
+	
+	@include media-query($small) {
+		max-width: 30rem;
+	}
+	@include media-query($medium) {
+		max-width: 60rem;
+	}
+	@include media-query($large) {
+		max-width: 90rem;
+	}
+}
+
+.site-header {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	span {
+		font-size: 2rem;
+		font-weight: 700;
+	}
+}
+
+.posts, .tags, .related {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+}
+.posts {
+	li {
+		margin-bottom: .5em;
+	}
+}
+
+.post-header {
+	margin-bottom: 1em;
+}
+
+.post-meta, .tag-cloud {
+	display: flex;
+	time {
+		margin-right: .5em;
+		font-size: .75em;
+	}
+	ul {
+		display: flex;
+		font-size: .75em;
+		list-style: none;
+		text-transform: uppercase;
+	}
+	li {
+		margin-right: .5em;
+	}
+	li:last-child {
+		margin-right: 0;
+	}
+}
+
+.site-footer {
+	padding-top: .5rem;
+	padding-bottom: 1rem;
+}
+

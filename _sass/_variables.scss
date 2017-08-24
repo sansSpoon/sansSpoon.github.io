@@ -1,0 +1,83 @@
+// ---------
+// ! Colour
+// =========
+// Coolors Exported Palette - coolors.co/eceae4-a69c94-605856-1c6e8c-274156
+$color1: rgba(236, 234, 228, 1); //alabaster
+$color2: rgba(166, 156, 148, 1); //coffee
+$color3: rgba(96, 88, 86, 1); //wenge
+$color4: rgba(28, 110, 140, 1); //metallicSeaweed
+$color5: rgba(39, 65, 86, 1); //japaneseIndigo
+
+$color-primary: rgba(236, 234, 228, 1) !default;
+$color-secondary: rgba(166, 156, 148, 1) !default;
+
+$color-txt: $color-primary !default;
+$color-bg: $color-secondary !default;
+$color-link: darken(complement($color-secondary),20%) !default;
+
+// -------
+// ! Font
+// =======
+$root-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif !default;
+$root-font-size: 16px !default;
+$root-line-height: 1.5 !default;
+
+// --------------
+// ! Media Query
+// ==============
+
+/*
+	Based on 16pt font-size
+	
+	$micro: 17em; // max wearables
+	$xsmall: 20em; // 320px min default-no-media-query
+	$small: 30em; // 480px min
+	$medium: 60em; // 960px min
+	$large: 90em; // 1440 px min
+	$xlarge: 120em; // 1920px min
+	$xxlarge: 160em; // 2560px min	
+*/
+
+
+$xsmall: 20em;
+$small: 30em;
+$medium: 60em;
+$large: 90em;
+$xlarge: 120em;
+
+
+@mixin media-query($break) {
+	@if $break == $xsmall {
+		@media (min-width: #{$xsmall}) {
+			@content;
+		}
+	} @else if $break == $small {
+		@media (min-width: #{$small}) {
+			@content;
+		}
+	} @else if $break == $medium {
+		@media (min-width: #{$medium}) {
+			@content;
+		}
+	} @else if $break == $large {
+		@media (min-width: #{$large}) {
+			@content;
+		}
+	} @else if $break == $xlarge {
+		@media (min-width: #{$xlarge}) {
+			@content;
+		}
+	} @else {
+		@warn "#{$break} is not a valid break point."
+	}
+}
+
+// ------------------------
+// ! Global Mixin & Extend
+// ========================
+
+%clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
