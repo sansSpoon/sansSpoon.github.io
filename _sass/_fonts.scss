@@ -1,0 +1,85 @@
+// Font Calls
+// 100	Thin (Hairline)
+// 200	Extra Light (Ultra Light)
+// 300	Light
+// 400	Normal
+// 500	Medium
+// 600	Semi Bold (Demi Bold)
+// 700	Bold
+// 800	Extra Bold (Ultra Bold)
+// 900	Black (Heavy)
+
+// Display
+@font-face {
+	font-family: 'EurostileExtTwo';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Eurostile LT Std Extended 2'), local('EurostileLTStd-Ex2'), url('/assets/font/EurostileLTStd-Ex2.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'EurostileExtTwo';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Eurostile LT Std Bold Extended 2'), local('EurostileLTStd-BoldEx2'), url('/assets/font/EurostileLTStd-BoldEx2.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Exo 2 Bold Expanded';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Exo 2 Bold Expanded'), local('Exo2-BoldExpanded'), url('/assets/font/Exo2-BoldExpanded.woff') format('woff');
+}
+
+
+// Body
+@font-face {
+	font-family: 'Exo 2';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Exo 2 Regular'), local('Exo2-Regular'), url('/assets/font/Exo2-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Exo 2';
+	font-style: italic;
+	font-weight: 400;
+	src: local('Exo 2 Italic'), local('Exo2-Italic'), url('/assets/font/Exo2-Italic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Exo 2';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Exo 2 Bold'), local('Exo2-Bold'), url('/assets/font/Exo2-Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Exo 2';
+	font-style: italic;
+	font-weight: 700;
+	src: local('Exo 2 Bold Italic'), local('Exo2-BoldItalic'), url('/assets/font/Exo2-BoldItalic.woff') format('woff');
+}
+
+// Monospace
+@font-face {
+	font-family: 'OCRA';
+	font-style: normal;
+	font-weight: normal;
+	src: local('OCR A Std Regular'), local('OCRAStd'), url('/assets/font/OCRAStd.woff') format('woff');
+}
+
+// Japanese
+@font-face {
+	font-family: 'Mplus';
+	font-style: normal;
+	font-weight: 400;
+	src: local('M+ 1mn'), local('mplus-1mn-regular'), url('/assets/font/mplus-1mn-regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Mplus';
+	font-style: normal;
+	font-weight: 700;
+	src: local('M+ 1mn bold'), local('mplus-1mn-bold'), url('/assets/font/mplus-1mn-bold.woff') format('woff');
+}
