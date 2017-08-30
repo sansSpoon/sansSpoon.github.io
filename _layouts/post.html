@@ -24,10 +24,14 @@ layout: default
 		</div>
 	</header>
 	
+	<nav aria-label="Table of Contents">
+		{{ content | toc_only }}
+	</nav>
+	
 	<section itemprop="articleBody">
 		{{ content }}
 	</section>
-	
+
 </article>
 
 {% if site.related_posts != empty %}
