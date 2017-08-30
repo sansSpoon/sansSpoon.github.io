@@ -33,10 +33,12 @@ kramdown:
   auto_ids:          true
   syntax_highlighter_opts:
     disable :        true
+#  parse_block_html:  true
 
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-toc
 # - jekyll-paginate
 # - jekyll-gist
 exclude:
