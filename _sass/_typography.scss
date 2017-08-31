@@ -30,6 +30,12 @@ h4, h5, h6 {
 	font-weight: 700;
 }
 
+p {
+	&::selection {
+		background: $color-highlight;
+	}
+}
+
 ruby {
 	font-family: "Mplus", $root-font-family;
 }
