@@ -24,9 +24,11 @@ layout: default
 		</div>
 	</header>
 	
+	{% if page.toc %}
 	<nav aria-label="Table of Contents">
 		{{ content | toc_only }}
 	</nav>
+	{% endif %}
 	
 	<section itemprop="articleBody">
 		{{ content }}
