@@ -1,6 +1,6 @@
-// ---------
+
 // ! Colour
-// =========
+// ----------
 $wpOrange: rgba(247, 92, 3, 1);
 $taupe: rgba(66, 57, 49, 1);
 $nickle: rgba(122, 116, 97, 1);
@@ -13,18 +13,23 @@ $color-bg: $taupe !default;
 $color-link: lighten($wpOrange,24%) !default;
 $color-highlight: $pacificBlue !default;
 
-// -------
+
+// ! Spacing
+// -----------
+$spacer: 1rem !default;
+
+
 // ! Font
-// =======
+// --------
 $root-font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !default;
-$root-font-size: 1em !default;
+$root-font-size: 1rem !default;
 $root-line-height: 1.5 !default;
 
-$root-mono-family: "SFMono-Light", Menlo, Monaco, 'Ubuntu Mono', monospace;
+$root-mono-family: 'SFMono-Light', Menlo, Monaco, 'Ubuntu Mono', monospace !default;
 
-// --------------
+
 // ! Media Query
-// ==============
+// ---------------
 
 /*
 	Based on 16pt font-size
@@ -72,10 +77,9 @@ $xlarge: 120em;
 	}
 }
 
-// ------------------------
-// ! Global Mixin & Extend
-// ========================
 
+// ! Global Mixin & Extend
+// -------------------------
 %clearfix:after {
 	content: "";
 	display: table;

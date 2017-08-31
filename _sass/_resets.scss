@@ -1,14 +1,14 @@
-// --------
-// ! Reset
-// ========
 
-* {
+// ! Reset
+// ---------
+
+*, *::before, *::after {
 	box-sizing: border-box;
 }
 
 html, body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+dl, dd, ol, ul, dd, figure {
 	margin: 0;
 	padding: 0;
 }
@@ -65,9 +65,8 @@ table {
 	margin-bottom: .25em;
 }
 
-td,
-th {
-  border: 1px solid $color-txt;
+td, th {
+	border: 1px solid $color-txt;
 }
 
 pre {
