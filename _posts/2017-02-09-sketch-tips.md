@@ -11,3 +11,4 @@ I've started using [Sketch](https://www.sketchapp.com "Sketch App") to do my pro
 - Copy groups of elements in the Layers List `cmd-opt-1` from one layout to another with `opt+drag`.
 - Use symbols to reuse elements 🙂, <del>symbols can't be scaled ☹️<del>.
 - You can import RAW images!
+- More to come
