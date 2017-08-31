@@ -1,5 +1,11 @@
 // Non Structural Typography
 
+h1, h2, h3, h4, h5, h6 {
+	color: $x11Grey;
+	margin-top: 0;
+	margin-bottom: .5rem;
+}
+
 h1 {
 	font-family: "EurostileExtTwo", $root-font-family;
 	font-size: 2rem;
@@ -28,6 +34,47 @@ h4, h5, h6 {
 	font-family: "Exo 2", $root-font-family;
 	font-size: 1rem;
 	font-weight: 700;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 1rem;
+	&::selection {
+		background: $color-highlight;
+	}
+}
+
+strong {
+	color: lighten($platinum, 20%);
+}
+
+ol, ul, dl {
+	margin-top: 0;
+	margin-bottom: 1rem;
+	padding-left: 1rem;
+}
+
+ol ol, ul ul, ol ul, ul ol {
+	margin-bottom: 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: .5rem;
+}
+
+abbr {
+	font-size: 73%;
+	text-transform: uppercase;
+	font-weight: bold;
+	&[title] {
+		cursor: help;
+		text-decoration: none;
+		border-bottom: 1px dotted $platinum;
+	}
 }
 
 ruby {
