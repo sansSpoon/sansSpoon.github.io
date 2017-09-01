@@ -2,6 +2,14 @@ main {
 	overflow: auto;
 }
 
+/*
+.header-glue {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+*/
 .site-header, .site-content, .site-footer {
 	max-width: 20rem;
 	padding-left:  1.5rem;
@@ -24,12 +32,16 @@ main {
 }
 
 .site-header {
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-	span {
-		font-size: 2rem;
-		font-weight: 700;
-	}
+	top:0;
+	height:120px;
+	position: sticky;
+	position: -webkit-sticky;
+	background-color: transparent;
+	overflow:hidden;
+}
+
+.site-content {
+	padding-top: 1.5rem;
 }
 
 .posts, .tags, .related {

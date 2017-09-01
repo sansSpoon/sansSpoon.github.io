@@ -1,0 +1,34 @@
+.strip {
+	display: block;
+	background-color: fade_out($nickle,0.6);
+	left: 0;
+	top: 1rem;
+	width:300px;
+	height:80px;
+	position: absolute;
+	transition: transform .5s ease-in-out;
+	z-index: 1001;
+}
+
+.stripClosed {
+	transform: translateX(-300px);
+}
+
+.strip>ul {
+	width: min-intrinsic;
+}
+
+.toggle {
+	width: 60px;
+	height: 80px;
+	top:0px;
+	position: absolute;
+	right: -60px;
+	
+}
+.polygon {
+	cursor: pointer;
+}
+.polygon:hover {
+	fill: darken($wpOrange, 30%);
+}
