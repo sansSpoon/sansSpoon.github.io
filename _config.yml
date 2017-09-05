@@ -39,6 +39,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-toc
+  - octopress-autoprefixer
 # - jekyll-paginate
 # - jekyll-gist
 exclude:
