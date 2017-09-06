@@ -23,6 +23,33 @@ controlButton.onclick = function() {
 	}
 };
 
+// throttle windows resizing events
+(function() {
+	var throttle = function(type, name, obj) {
+		obj = obj || window;
+		var running = false;
+		var func = function() {
+			if (running) { return; }
+			running = true;
+			requestAnimationFrame(function() {
+				obj.dispatchEvent(new CustomEvent(name));
+				running = false;
+			});
+		};
+		obj.addEventListener(type, func);
+	};
+
+	/* init - you can init any event */
+	throttle("resize", "optimizedResize");
+})();
+
+// handle window resizing
+window.addEventListener("optimizedResize", function() {
+	csWidth = controlStrip.getBoundingClientRect().width;
+	if (csState == "closed") {
+		csClose();
+	}	
+});
 
 
 //window.onscroll = function() {
