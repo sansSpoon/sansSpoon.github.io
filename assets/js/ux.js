@@ -1,9 +1,13 @@
 
 var	controlButton = document.querySelector('.polygon'),
-	controlStrip = document.querySelector('.strip');
+	controlStrip = document.querySelector('.strip'),
+	csWidth = controlStrip.getBoundingClientRect().width;
 
 controlButton.onclick = function() {
-	controlStrip.classList.toggle('stripClosed');
+	/*controlStrip.classList.toggle('stripClosed');*/
+	console.log(csWidth);
+	controlStrip.style.WebkitTransform = 'translate(-' + csWidth + 'px)';
+	controlStrip.style.transform = 'translate(-' + csWidth + 'px)';
 };
 
 
