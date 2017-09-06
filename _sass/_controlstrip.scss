@@ -32,16 +32,16 @@ $strip-height: 120px;
 	display: block;
 	background-color: fade_out($nickle,0.6);
 	left: 0;
-	top: 1rem;
-	width:300px;
-	height:80px;
+	top: 1.5rem;
+	width:66%;
+	height:60px;
 	position: absolute;
 	transition: transform .5s ease-in-out;
 	z-index: 1000;
 }
 
 .stripClosed {
-	transform: translateX(-300px);
+	transform: translateX(-66%);
 }
 
 .strip>ul {
@@ -49,16 +49,18 @@ $strip-height: 120px;
 }
 
 .toggle {
-	width: 60px;
-	height: 80px;
+	width: 45px;
+	height: 60px;
 	top:0px;
 	position: absolute;
-	right: -60px;
+	right: -45px;
 	
 }
 .polygon {
 	cursor: pointer;
 }
 .polygon:hover {
-	fill: darken($wpOrange, 30%);
+	@media (hover) {
+		fill: darken($wpOrange, 30%);
+	}
 }
