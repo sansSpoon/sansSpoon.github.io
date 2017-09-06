@@ -1,14 +1,28 @@
 
 var	controlButton = document.querySelector('.polygon'),
 	controlStrip = document.querySelector('.strip'),
-	csWidth = controlStrip.getBoundingClientRect().width;
+	csWidth = controlStrip.getBoundingClientRect().width,
+	csState = "open";
 
-controlButton.onclick = function() {
-	/*controlStrip.classList.toggle('stripClosed');*/
-	console.log(csWidth);
+function csOpen() {
+	controlStrip.style.removeProperty('transform');
+	csState = "open";
+}
+
+function csClose() {
 	controlStrip.style.WebkitTransform = 'translate(-' + csWidth + 'px)';
 	controlStrip.style.transform = 'translate(-' + csWidth + 'px)';
+	csState = "closed";
+}
+
+controlButton.onclick = function() {
+	if (csState == "open") {
+		csClose();
+	} else {
+		csOpen();
+	}
 };
+
 
 
 //window.onscroll = function() {
