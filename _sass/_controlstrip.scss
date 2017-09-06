@@ -60,5 +60,7 @@ $strip-height: 120px;
 	cursor: pointer;
 }
 .polygon:hover {
-	fill: darken($wpOrange, 30%);
+	@media (hover) {
+		fill: darken($wpOrange, 30%);
+	}
 }
