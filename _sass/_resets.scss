@@ -33,7 +33,7 @@ html {
 
 body {
 	color: $color-txt;
-	background-color: darken($color-bg,15%);
+	background-color: darken($color-bg,10%);
 	text-rendering: optimizeLegibility;
 	font-feature-settings: "kern" 1, "liga" 1, "dlig" 1, "swsh" 1;
 	-webkit-text-size-adjust: 100%;
@@ -59,7 +59,7 @@ img {
 
 table {
 	width: 100%;
-	border: 1px solid $color-primary;
+	border: 1px solid $color-txt;
 	border-collapse: collapse;
 	margin-top: .25em;
 	margin-bottom: .25em;

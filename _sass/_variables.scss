@@ -8,12 +8,10 @@ $x11Grey: rgba(193, 189, 189, 1);
 $platinum: rgba(229, 224, 224, 1);
 $pacificBlue: rgba(2, 172, 198, 1); //link-background
 
-$color-primary: rgba(236, 234, 228, 1) !default;
-$color-secondary: rgba(166, 156, 148, 1) !default;
-
-$color-txt: $color-primary !default;
-$color-bg: $color-secondary !default;
-$color-link: darken(complement($color-secondary),20%) !default;
+$color-txt: $platinum !default;
+$color-bg: $taupe !default;
+$color-link: lighten($wpOrange,24%) !default;
+$color-highlight: $pacificBlue !default;
 
 
 // ! Spacing
@@ -82,9 +80,30 @@ $xlarge: 120em;
 
 // ! Global Mixin & Extend
 // -------------------------
-
 %clearfix:after {
 	content: "";
 	display: table;
 	clear: both;
+}
+
+%base-width {
+	max-width: 20rem;
+	padding-left:  1.5rem;
+	padding-right: 1.5rem;
+	margin-left:  auto;
+	margin-right: auto;
+}
+
+%media-widths {
+	@include media-query($small) {
+		max-width: 34rem; // 16 * 1.25 * 34 // 680px
+	} // $small: 30em; // 480px min
+
+	@include media-query($medium) {
+		max-width: 44rem; // 16 * 1.5 * 44 // 1056px
+	} // $medium: 60em; // 960px min
+
+	@include media-query($large) {
+		max-width: 37rem; // 16 * 2.5 * 37 // 1480px
+	} // $large: 90em; // 1440 px min
 }

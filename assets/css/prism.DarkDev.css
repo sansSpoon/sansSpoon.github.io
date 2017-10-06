@@ -7,9 +7,9 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-	color: white;
+	color: rgba(229, 224, 224, 1);
 	background: none;
-	text-shadow: 0 -.1em .2em black;
+	text-shadow: 0 .1em .2em black;
 	font-family: "OCRA", "SFMono-Light", Menlo, Monaco, 'Ubuntu Mono', monospace;
 	font-feature-settings: "kern" 1, "liga" 0, "dlig" 0, "swsh" 0;
 	font-size: .85rem;
@@ -39,26 +39,25 @@ pre[class*="language-"] {
 
 pre[class*="language-"],
 :not(pre) > code[class*="language-"] {
-	background: hsl(30, 20%, 25%);
+	background: rgba(51, 44, 38, 1) url("../chrome/bevel.svg") right bottom no-repeat;
+	background-size: 20px 18px;
 }
 
 /* Code blocks */
 pre[class*="language-"] {
+	/*position: relative;*/
 	padding: 1em;
 	margin: .5em 0;
-	overflow: auto;
-	border: .3em solid hsl(30, 20%, 40%);
-	border-radius: .5em;
-	box-shadow: 1px 1px .5em black inset;
+	overflow: scroll;
+	box-shadow: 0 .5em .5em -.5em  black inset;
 }
 
 /* Inline code */
 :not(pre) > code[class*="language-"], :not(pre) > code {
 	font-size: .85rem;
-	padding: .15em .2em .05em;
+	padding: .3em .2em .2em .2em;
+	background: rgba(51, 44, 38, 1);
 	border-radius: .3em;
-	border: .13em solid hsl(30, 20%, 40%);
-	box-shadow: 1px 1px .3em -.1em black inset;
 	white-space: normal;
 }
 
