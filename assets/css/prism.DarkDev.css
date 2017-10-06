@@ -55,6 +55,7 @@ pre[class*="language-"] {
 /* Inline code */
 :not(pre) > code[class*="language-"], :not(pre) > code {
 	font-size: .85rem;
+	font-feature-settings: "kern" 1, "liga" 0, "dlig" 0, "swsh" 0;
 	padding: .3em .2em .2em .2em;
 	background: rgba(51, 44, 38, 1);
 	border-radius: .3em;
