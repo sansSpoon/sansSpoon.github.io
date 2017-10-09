@@ -33,7 +33,7 @@ html {
 
 body {
 	color: $color-txt;
-	background-color: darken($color-bg,10%);
+	background: darken($color-bg,10%) url(/assets/chrome/randomHexOpacityTileNormaliseLightMin.svg) repeat fixed;
 	text-rendering: optimizeLegibility;
 	font-feature-settings: "kern" 1, "liga" 1, "dlig" 1, "swsh" 1;
 	-webkit-text-size-adjust: 100%;
