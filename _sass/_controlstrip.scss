@@ -22,22 +22,60 @@ $strip-height: 120px;
 .fixed-strip {
 	position: relative;
 	z-index: 1;
-	overflow-x: hidden;
+	overflow: hidden;
 	height: $strip-height;
 	@extend %base-width;
 	@extend %media-widths;
 }
 
 .strip {
-	display: block;
-	background-color: fade_out($nickle,0.6);
+	position: absolute;
 	left: 0;
 	top: 1.5rem;
+	z-index: 1000;
+	
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
 	width:66%;
 	height:60px;
-	position: absolute;
+	border: 2px solid fade_out($nickle,0.27);
+	
+	background-color: fade_out($nickle,0.69);
+	box-shadow: 0px 0px 2px transparentize($nickle, 0.39),
+		inset 0px 0px 4px transparentize($nickle, 0.63);
+	
 	transition: transform .5s ease-in-out;
-	z-index: 1000;
+	
+	h1 {
+		padding: 0;
+		margin: 0;
+		
+		color: transparentize(lighten($nickle,10%),0.53);
+		
+		font-feature-settings: "kern" 1;
+		font-kerning: normal;
+		font-family: "EurostileExtTwo", $root-font-family;;
+		font-weight: 700;
+		font-size: 1.5rem;
+		line-height: 1;
+		letter-spacing: -0.075em;
+		text-transform: uppercase;
+		text-shadow: 0px 0px 3px transparentize($nickle, 0.47);
+		
+		.first {
+			padding-left: .15em;
+			
+			font-size: .75rem;
+			letter-spacing: 1.3em;
+			
+		}
+		
+		.kern {
+			letter-spacing: -.12em;
+		}
+	}
+
 }
 
 .stripClosed {
