@@ -1,13 +1,69 @@
 <header class="site-header">
 	<div class="fixed-strip">
 		<div class="strip">
-			<ul>
-			<li>blog</li>
-			<li>bio</li>
-			<li>builds</li>
-			</ul>
-		<svg class="toggle" width="60px" height="80px" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg"><title>toggle</title><path class="polygon" d="M60 0H0v80h25.257c1.82 0 3.577-.686 4.92-1.922l27.448-25.24C59.138 51.444 60 49.477 60 47.414V0z" fill="#F75C03" fill-rule="evenodd"/></svg>
-		</div>
+			<h1><span class="first">J.David</span><br>M<span class="kern">a</span>clean</h1>
+		<svg id="neo-n" viewBox="0 0 86 106">
+			<defs>
+				<filter x="-5.8%" y="-4.4%" width="111.7%" height="108.8%" filterUnits="objectBoundingBox" id="box-shadow">
+					<feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"/>
+					<feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+					<feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+					<feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+					<feFlood flood-color="rgba(247, 92, 3, .61)" result="shadowColor"/>
+					<feComposite in="shadowColor" in2="shadowBlurOuter1" operator="in"/>
+				</filter>
+				<filter x="-7.5%" y="-5.6%" width="115.0%" height="111.2%" filterUnits="objectBoundingBox" id="box-shadow-inset">
+					<feGaussianBlur stdDeviation="2" in="SourceAlpha" result="shadowBlurInner1"/>
+					<feOffset in="shadowBlurInner1" result="shadowOffsetInner1"/>
+					<feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"/>
+					<feFlood flood-color="rgba(247, 92, 3, .37)" result="shadowColor"/>
+					<feComposite in="shadowColor" in2="shadowInnerInner1" operator="in"/>
+				</filter>
+				<filter x="-17%" y="-17%" width="134%" height="134%" filterUnits="objectBoundingBox" id="text-shadow">
+					<feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+					<feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+					<feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+					<feFlood flood-color="rgba(247, 92, 3, .53)" result="shadowColor"/>
+					<feComposite in="shadowColor" in2="shadowBlurOuter1" operator="in"/>
+				</filter>
+				<filter x="-34.2%" y="-25.6%" width="168.3%" height="151.2%" filterUnits="objectBoundingBox" id="box-shadow-lit">
+					<feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"/>
+					<feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+					<feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+					<feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+					<feFlood flood-color="rgba(247, 92, 3, .61)" result="shadowColor1"/>
+					<feComposite in="shadowColor1" in2="shadowBlurOuter1" operator="in"/>
+				</filter>
+		
+				<path d="M60 0H0v80h25.827c1.457 0 2.865-.53 3.96-1.492L57.96 53.76c1.297-1.138 2.04-2.78 2.04-4.507V0z" id="neo-n-p"/>
+				<path d="M18.16 57.288l-2.027 3.627c-2.077-1.053-4.28-2.12-6.614-3.2l1.92-3.627c2.303 1.024 4.543 2.09 6.72 3.2zm5.226-1.067l3.84.855c-.768 4.366-2.5 7.694-5.195 9.984-2.694 2.29-6.51 3.654-11.444 4.095l-.64-3.947c4.067-.412 7.132-1.46 9.195-3.147 2.063-1.684 3.478-4.297 4.246-7.84z" id="n"/>
+				<path d="M24.834 31.413l2.453 2.88c-1.72 1.564-3.712 2.958-5.973 4.18v10.433H16.94V40.48c-2.46.924-4.913 1.564-7.36 1.92l-.64-3.734c2.987-.412 5.88-1.258 8.683-2.538 2.802-1.28 5.206-2.852 7.21-4.715z" id="i"/>
+				<path d="M10.696 13.053V9.427h14.507v3.626H10.696zm11.072 5.654H9.203V15.08h17.173v.64c0 3.612-1.102 6.336-3.307 8.17-2.205 1.835-5.654 2.845-10.347 3.03l-.64-3.627c2.858-.114 5.06-.537 6.602-1.27 1.543-.732 2.57-1.837 3.083-3.316z" id="ra"/>
+				<path d="M35.763 42.35l-2.88-2.453c1.194-1.208 2.19-2.616 2.986-4.224.796-1.607 1.293-3.185 1.493-4.736l3.946.214c-.072.598-.157 1.167-.257 1.707h9.11v.64c0 3.5-.512 6.344-1.536 8.534-1.024 2.19-2.585 3.844-4.683 4.96-2.098 1.117-4.86 1.81-8.288 2.08l-.64-3.626c3.655-.384 6.28-1.223 7.872-2.517 1.593-1.294 2.546-3.442 2.86-6.443h-5.825c-.925 2.09-2.312 4.046-4.16 5.867z" id="ku"/>
+				<path d="M33.31 13.587V9.853h17.6v3.734c-.698 1.848-1.636 3.44-2.817 4.778-1.18 1.337-2.766 2.574-4.757 3.712.94 1.35 1.58 2.29 1.92 2.816l-3.627 2.24c-1.95-2.873-4.01-5.788-6.187-8.746l3.52-2.347c.896 1.195 1.543 2.07 1.94 2.624 2.604-1.437 4.43-3.13 5.484-5.077H33.31z" id="ma"/>	
+			</defs>
+			<g id="neo-n-s" transform="translate(13 13)" fill="none" fill-rule="evenodd">
+				<g id="poly">
+					<use id="poly-off" fill="black" filter="url(#box-shadow)" xlink:href="#neo-n-p"/>
+					<use id="poly-on" fill="black" filter="url(#box-shadow-lit)" xlink:href="#neo-n-p"/>
+					<use fill-opacity="0.31" fill="#F75C03" xlink:href="#neo-n-p"/>
+					<use fill="black" filter="url(#box-shadow-inset)" xlink:href="#neo-n-p"/>
+					<use stroke-opacity="0.73" stroke="#F75C03" stroke-width="1" xlink:href="#neo-n-p"/>
+				</g>
+				<g id="text">
+					<use fill="black" filter="url(#text-shadow)" xlink:href="#n"/>
+					<use fill-opacity="0.73" fill="#F75C03" xlink:href="#n"/>
+					<use fill="black" filter="url(#text-shadow)" xlink:href="#i"/>
+					<use fill-opacity="0.73" fill="#F75C03" xlink:href="#i"/>
+					<use fill="black" filter="url(#text-shadow)" xlink:href="#ra"/>
+					<use fill-opacity="0.73" fill="#F75C03" xlink:href="#ra"/>
+					<use fill="black" filter="url(#text-shadow)" xlink:href="#ku"/>
+					<use fill-opacity="0.73" fill="#F75C03" xlink:href="#ku"/>
+					<use fill="black" filter="url(#text-shadow)" xlink:href="#ma"/>
+					<use fill-opacity="0.73" fill="#F75C03" xlink:href="#ma"/>
+				</g>
+			</g>
+		</svg>
 	</div>
 </header>
 <div class="site-header-bg">
