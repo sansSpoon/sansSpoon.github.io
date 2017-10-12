@@ -30,7 +30,7 @@ $strip-height: 120px;
 
 .strip {
 	position: absolute;
-	left: 0;
+	left: -1px;
 	top: 1.5rem;
 	z-index: 1000;
 	
@@ -99,19 +99,30 @@ $strip-height: 120px;
 	width: min-intrinsic;
 }
 
-.toggle {
-	width: 45px;
-	height: 60px;
-	top:0px;
+#neo-n {
+	width: 64px;
+	height: 94px;
+	top:-18px;
 	position: absolute;
-	right: -45px;
-	
+	right: -55px;
 }
-.polygon {
+
+#neo-n-s {
 	cursor: pointer;
 }
-.polygon:hover {
+#neo-n-s #poly-off {
+	opacity: 1;
+}
+#neo-n-s #poly-on {
+	opacity: 0;
+}
+#neo-n-s:hover #poly-off {
 	@media (hover) {
-		fill: darken($wpOrange, 30%);
+		opacity: 0;
+	}
+}
+#neo-n-s:hover #poly-on {
+	@media (hover) {
+		opacity: 1;
 	}
 }

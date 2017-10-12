@@ -1,5 +1,5 @@
 
-var	controlButton = document.querySelector('.polygon'),
+var	controlButton = document.getElementById('neo-n-s'),
 	controlStrip = document.querySelector('.strip'),
 	csWidth = controlStrip.getBoundingClientRect().width,
 	csState = "open";
