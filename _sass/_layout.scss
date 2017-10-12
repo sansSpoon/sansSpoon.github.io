@@ -11,9 +11,11 @@ main {
 	@extend %media-widths;
 }
 
+
 .site-content {
-	padding-top: 1.5rem;
+	padding-top: 0.5rem;
 }
+
 
 .posts, .tags, .related {
 	ul {
