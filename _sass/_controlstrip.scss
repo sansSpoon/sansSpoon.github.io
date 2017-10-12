@@ -30,9 +30,9 @@ $strip-height: 6rem;
 
 .fixed-strip {
 	position: relative;
+	z-index: 1;
 	display: flex;
 	align-items: center;
-	z-index: 1;
 	overflow: hidden;
 	height: $strip-height;
 	@extend %base-width;
@@ -45,17 +45,14 @@ $strip-height: 6rem;
 
 .strip {
 	position: absolute;
-	left: -1px;
-	/*top: 1.5rem;*/
 	z-index: 1000;
-	
+	left: -1px;	
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-	width:67%;
-	height:60px;
+	width: 67%;
+	height: 60px;
 	border: 1px solid fade_out($nickle,0.27);
-	
 	background-color: fade_out($nickle,0.69);
 	box-shadow: 0px 0px 2px transparentize($nickle, 0.39),
 		inset 0px 0px 4px transparentize($nickle, 0.63);
@@ -70,24 +67,22 @@ $strip-height: 6rem;
 			inset 0px 0px 4px transparentize($nickle, 0.63);
 	}
 	
-	@include media-query($large) {
-		width:53%;
+	@include media-query($medium) {
 		height: 80px;
 	}
 	
-	@include media-query($medium) {
+	@include media-query($large) {
+		width: 53%;
 		height: 80px;
 	}
 	
 	h1 {
 		padding: 0;
 		margin: 0;
-		
 		color: transparentize(lighten($nickle,10%),0.53);
-		
 		font-feature-settings: "kern" 1;
 		font-kerning: normal;
-		font-family: "EurostileExtTwo", $root-font-family;;
+		font-family: "EurostileExtTwo", $root-font-family;
 		font-weight: 700;
 		font-size: 1.5rem;
 		line-height: 1;
@@ -102,7 +97,6 @@ $strip-height: 6rem;
 		
 		.first {
 			padding-left: .15em;
-			
 			font-size: .75rem;
 			letter-spacing: 1.3em;
 			
@@ -138,23 +132,19 @@ $strip-height: 6rem;
 	}
 }
 
-.strip>ul {
-	width: min-intrinsic;
-}
-
 #neo-n {
+	position: absolute;
+	top: -18px;
+	right: -55px;
 	width: 64px;
 	height: 94px;
-	top:-18px;
-	position: absolute;
-	right: -55px;
 	
 	@include media-query($medium) {
+		position: absolute;
+		top: -14px;
+		right: -73px;
 		width: 86px;
 		height: 106px;
-		top:-14px;
-		position: absolute;
-		right: -73px;
 	}
 }
 
