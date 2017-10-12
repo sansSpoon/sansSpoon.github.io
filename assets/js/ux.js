@@ -52,6 +52,27 @@ window.addEventListener("optimizedResize", function() {
 });
 
 
+var pTags = document.querySelector('.post-tags');
+if (pTags) {
+	tags = pTags.getElementsByTagName('li');
+	
+	for (var i=0; i<tags.length; i++) {
+		tags[i].firstChild.addEventListener('mouseover', tagExpand, false);
+		tags[i].firstChild.addEventListener('mouseout', tagExpand, false);
+	}
+	
+	function tagExpand(event) {
+		if (this.dataset.tag) {
+			if (event.type == 'mouseover') {
+				myTag = this.innerHTML;
+				this.innerHTML = this.dataset.tag;
+			} else if (event.type == 'mouseout') {
+				this.innerHTML = myTag;
+			}
+		}
+	}
+}
+
 //window.onscroll = function() {
 //	var viewportOffset = document.querySelector('.post-meta').getBoundingClientRect().top;
 //    console.log(viewportOffset);
