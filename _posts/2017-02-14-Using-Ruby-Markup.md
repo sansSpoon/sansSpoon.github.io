@@ -2,7 +2,7 @@
 layout: post
 #title: Example content
 #date: 2016-01-12
-tags: [日本語, japanese, ruby]
+tags: [jpn,htm]
 ---
 
 I'm learning Japanese! The class I'm going to, and the text book we use, deals primarily with Hiragana and Katakana. Kanji is a whole other beast and will take a while to learn.

@@ -2,7 +2,7 @@
 layout: post
 #title: Sketch Tips
 #date: 2017-02-09
-tags: [ux, sketch]
+tags: [skt]
 ---
 
 I've started using [Sketch](https://www.sketchapp.com "Sketch App") to do my prototyping. Here are some tips that I've learnt along the way.

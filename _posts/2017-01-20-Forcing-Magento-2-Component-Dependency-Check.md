@@ -2,7 +2,7 @@
 layout: post
 title: Forcing Magento 2 Component Dependency Check to continue.
 date: 2016-01-20
-tags: [nix, cron, magento]
+tags: [nix,crn,mgo]
 ---
 
 When attempting an update/install of a Magneto 2 extension, I came across the error `We found conflicting component dependencies`. No additional information was given. This was resolved by renaming the file `<your Magento install dir>/var/.setup_cronjob_status` to `<your Magento install dir>/var/.setup_cronjob_status.bak`.

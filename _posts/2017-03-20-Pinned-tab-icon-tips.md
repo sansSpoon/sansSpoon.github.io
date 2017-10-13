@@ -2,7 +2,7 @@
 layout: post
 #title: Example content
 #date: 2016-01-12
-tags: [svg, html]
+tags: [svg,htm]
 ---
 
 I've just updated my site with a spiffy new [Pinned Tab Icon](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/pinnedTabs/pinnedTabs.html "Apple Developer Documentation"). The code is pretty straight forward, just add the following into your header element.
