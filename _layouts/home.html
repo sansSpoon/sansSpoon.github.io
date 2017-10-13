@@ -23,7 +23,7 @@ layout: default
 								{% assign myTag = dtag.name %}
 							{% endif %}
 						{% endfor  %}
-						<li><a href="{{ site.baseurl }}/tags/index.html#{{ ptag | cgi_escape }}" title="Pages tagged {{ myTag }}" rel="tag" data-tag="{{ myTag }}">{{ ptag }}</a></li>
+						<li class="tag"><a href="{{ site.baseurl }}/tags/index.html#{{ ptag | cgi_escape }}" title="Pages tagged {{ myTag }}" rel="tag" data-tag="{{ myTag }}">{{ ptag }}</a></li>
 						{% unless forloop.last %}{% endunless %}
 					{% endfor %}
 				</ul>

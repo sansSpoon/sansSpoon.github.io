@@ -76,51 +76,68 @@ main {
 
 // ! Tags
 // ---------------
-.post-meta>time {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-content: center;
-	padding: .25em 0.5em 0 0.75em;
-	border-radius: 2px;
-	margin-right: 0.2em;
-	background: $wpOrange;
-	color: $color-bg;
-
-}
-
-.post-meta>time:after {
-	position: absolute;
-	z-index: -1;
-	left: 0; top: 0; width: 100%; height: 100%;
-	border-radius: 2px;
-	background: $wpOrange;
-	content: "";
-	transform-origin: bottom left;
-	transform: skew(-30deg);
-}
-
 .post-meta>ul {
 	padding: 0;
 	margin: 0;
 }
 
-.post-meta ul li {
+%tag {
+	position: relative;
 	display: flex;
-	flex-direction: column; 
+	flex-direction: column;
 	justify-content: center;
 	align-content: center;
-	padding: .25em 0.75em 0 0.75em;
+	padding: 0.25em 0.75em 0 0.75em;
 	border-radius: 2px;
-	margin-right: 0.2em;
-	margin-bottom: 0;
+	margin-right: 0.25em;
+	margin-bottom: 0.25em;
+}
+
+%tag-after {
+	position: absolute;
+	z-index: -1;
+	left: 0; top: 0; width: 100%; height: 100%;
+	border-radius: 2px;
+	content: "";
+	transform-origin: bottom left;
+	transform: skew(-31deg);
+}
+
+.post-meta .tag {
+	@extend %tag;
 	background: $nickle;
 	transform-origin: bottom left;
-	transform: skew(-30deg);
+	transform: skew(-31deg);
+	
+	a {
+		color: $color-bg;
+		text-decoration: none;
+		transform: skew(31deg);
+	}
 }
-.post-meta ul li a {
+
+.post-meta>time {
+	@extend %tag;
+	background: $wpOrange;
 	color: $color-bg;
-	text-decoration: none;
-	transform: skew(30deg);
+}
+
+.post-meta>time:after {
+	@extend %tag-after;
+	background: $wpOrange;
+}
+
+.post-meta .first-tag {
+	@extend %tag;
+	background: $nickle;
+	
+	a {
+		color: $color-bg;
+		text-decoration: none;
+	}
+}
+
+.post-meta .first-tag:after {
+	@extend %tag-after;
+	background: $nickle;
 }
