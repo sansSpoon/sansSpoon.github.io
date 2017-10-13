@@ -8,7 +8,6 @@ main {
 // See "controlstrip" for header layout
 
 .site-content, .site-footer {
-	z-index: 0;
 	@extend %base-width;
 	background-color: $color-bg;
 	@extend %media-widths;
@@ -45,14 +44,16 @@ main {
 }
 
 .post-meta, .tag-cloud {
+	position: relative;
+	z-index: 1;
 	display: flex;
 	time {
 		margin-right: .5em;
-		font-size: .75em;
+		font-size: 1em;
 	}
 	ul {
 		display: flex;
-		font-size: .75em;
+		font-size: 1em;
 		list-style: none;
 		text-transform: uppercase;
 	}
@@ -64,4 +65,55 @@ main {
 	}
 }
 
+// ! Tags
+// ---------------
+.post-meta>time {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+	height: 1.5em; 
+	padding: 0 0.5em 0 0.75em;
+	margin-right: 0.2em;
+	border-radius: 2px;
+	background: #008dd0;
 
+}
+
+.post-meta>time:after {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	left: 0; top: 0; width: 100%; height: 100%;
+	border-radius: 2px;
+	transform-origin: bottom left;
+	transform: skew(-30deg);
+	background: #008dd0;
+}
+
+.post-meta>ul {
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+
+.post-meta ul li {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+	height: 1.5em; 
+	padding: 0 0.75em;
+	margin-right: 0.2em;
+	border-radius: 2px;
+	transform-origin: bottom left;
+	transform: skew(-30deg);
+	background: #008dd0;
+	font-size: 1em;
+}
+.post-meta ul li a {
+	transform: skew(30deg);
+	color: white;
+	text-decoration: none;
+}
