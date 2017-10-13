@@ -28,8 +28,8 @@ main {
 
 .posts, .tags, .related {
 	ul {
-		margin: 0;
 		padding: 0;
+		margin: 0;
 		list-style: none;
 	}
 }
@@ -47,15 +47,20 @@ main {
 	position: relative;
 	z-index: 1;
 	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 3em;
+	font-family: "EurostileExtTwo", $root-font-family;
+	font-size: .75em;
+	line-height: 1;
+	font-weight: 700;
+	text-transform: uppercase;
+
 	time {
 		margin-right: .5em;
-		font-size: 1em;
 	}
 	ul {
 		display: flex;
-		font-size: 1em;
 		list-style: none;
-		text-transform: uppercase;
 	}
 	li {
 		margin-right: .5em;
@@ -65,55 +70,57 @@ main {
 	}
 }
 
+.post-title {
+	margin-bottom: 0;
+}
+
 // ! Tags
 // ---------------
 .post-meta>time {
 	position: relative;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-content: center;
-	flex-direction: column;
-	height: 1.5em; 
-	padding: 0 0.5em 0 0.75em;
-	margin-right: 0.2em;
+	padding: .25em 0.5em 0 0.75em;
 	border-radius: 2px;
-	background: #008dd0;
+	margin-right: 0.2em;
+	background: $wpOrange;
+	color: $color-bg;
 
 }
 
 .post-meta>time:after {
-	content: "";
-	z-index: -1;
 	position: absolute;
+	z-index: -1;
 	left: 0; top: 0; width: 100%; height: 100%;
 	border-radius: 2px;
+	background: $wpOrange;
+	content: "";
 	transform-origin: bottom left;
 	transform: skew(-30deg);
-	background: #008dd0;
 }
 
 .post-meta>ul {
 	padding: 0;
 	margin: 0;
-	display: flex;
 }
 
 .post-meta ul li {
 	display: flex;
+	flex-direction: column; 
 	justify-content: center;
 	align-content: center;
-	flex-direction: column;
-	height: 1.5em; 
-	padding: 0 0.75em;
-	margin-right: 0.2em;
+	padding: .25em 0.75em 0 0.75em;
 	border-radius: 2px;
+	margin-right: 0.2em;
+	margin-bottom: 0;
+	background: $nickle;
 	transform-origin: bottom left;
 	transform: skew(-30deg);
-	background: #008dd0;
-	font-size: 1em;
 }
 .post-meta ul li a {
-	transform: skew(30deg);
-	color: white;
+	color: $color-bg;
 	text-decoration: none;
+	transform: skew(30deg);
 }
