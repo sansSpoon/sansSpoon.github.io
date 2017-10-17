@@ -28,15 +28,11 @@ function tagExpand(event) {
 }
 
 function alignTags(apTags) {
-	console.log(apTags);
 	for (var i=0; i<apTags.length; i++) { 
-		
 		postTagsLoc = apTags[i].offsetLeft;
-		console.log(postTagsLoc);
 		if (postTagsLoc == 0) {
 			apTags[i].getElementsByTagName('li')[0].className = 'first-tag';
 		} else {
-			console.log(apTags[i]);
 			apTags[i].getElementsByTagName('li')[0].className = 'tag';
 		}
 	}
@@ -76,23 +72,18 @@ window.addEventListener("optimizedResize", function() {
 	if (csState == "closed") {
 		csClose();
 	}
-	
 	alignTags(apTags);
-	
-	
 });
 
 if (apTags) {
 	for (var i=0; i<apTags.length; i++) { 
-		
 		tags = apTags[i].getElementsByTagName('li');
-		
 		for (var j=0; j<tags.length; j++) {
 			tags[j].firstChild.addEventListener('mouseover', tagExpand, false);
 			tags[j].firstChild.addEventListener('mouseout', tagExpand, false);
 		}
-		
 	}
+	alignTags(apTags);
 }
 
 /*
