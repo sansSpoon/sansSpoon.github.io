@@ -117,6 +117,13 @@ main {
 	border-radius: 2px;
 	margin-right: 0.25em;
 	margin-bottom: 0.25em;
+	
+	@include media-query($medium) {
+		border-radius: 3px;
+	}
+	@include media-query($large) {
+		border-radius: 4px;
+	}
 }
 
 %tag-after {
@@ -127,6 +134,14 @@ main {
 	content: "";
 	transform-origin: bottom left;
 	transform: skew(-31deg);
+	
+	@include media-query($medium) {
+		border-radius: 3px;
+	}
+	@include media-query($large) {
+		border-radius: 4px;
+	}
+
 }
 
 .post-meta .tag {
