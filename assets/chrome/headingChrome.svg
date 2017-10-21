@@ -1,13 +1,40 @@
-<svg viewBox="0 0 282 11" xmlns="http://www.w3.org/2000/svg">
-	<g id="hc" fill="none" fill-rule="evenodd">
-		<svg id="rx" viewBox="0 0 282 11" preserveAspectRatio="xMaxYMid">
-			<path id="rp" fill="#7A7461" d="M207 5h37v1h-37V5zm37-2h27v3h-27V3z"/>
-			<path id="rv" stroke="#7A7461" d="M276.5.5v10" stroke-linecap="square"/>
-			<path id="rh" stroke="#7A7461" d="M281.5 5.5h-5" stroke-linecap="square"/>
-		</svg>
-		<svg id="lx" preserveAspectRatio="xMinYMid">
-			<path id="lv" d="M5.5.5v10" stroke="#7A7461" stroke-linecap="square"/>
-			<path id="lh" d="M10.5 5.5H.5" stroke="#7A7461" stroke-linecap="square"/>
-		</svg>
-	</g>
+<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+	<style>
+		#rp {
+			fill: rgba(122, 116, 97, 1);
+		}
+		.hcs {
+			stroke: rgba(122, 116, 97, 1);
+			stroke-width: 1;
+			stroke-linecap: square;
+		}
+		
+		@media (min-width: 30em) {
+			#rp {
+				fill: rgba(122, 116, 97, .7);
+			}
+			.hcs {
+				stroke: rgba(122, 116, 97, .7);
+			}
+		}
+		
+		@media (min-width: 60em) {
+			#rp {
+				fill: rgba(122, 116, 97, .5);
+			}
+			.hcs {
+				stroke: rgba(122, 116, 97, .5);
+			}
+		}
+		
+	</style>
+	<svg id="rx" viewBox="0 0 75 11" preserveAspectRatio="xMaxYMid meet">
+		<path id="rp" d="M0 5h37v1H0V5zm37-2h27v3H37V3z"/>
+		<path id="rv" class="hcs" d="M69.5.5v10"/>
+		<path id="rh" class="hcs" d="M74.5 5.5h-5"/>
+	</svg>
+	<svg id="lx" viewBox="0 0 11 11" preserveAspectRatio="xMinYMid meet">
+		<path id="lv" class="hcs" d="M5.5.5v10"/>
+		<path id="lh" class="hcs" d="M10.5 5.5H.5"/>
+	</svg>
 </svg>
