@@ -9,6 +9,9 @@ layout: default
 	<ul>
 		{% for post in site.posts %}
 		<li>
+			{% if forloop.first == false %}
+				<img class="hc" src="{{ site.baseurl }}/assets/chrome/headingChrome.svg" alt="">
+			{% endif %}
 			<h1 class="post-title">
 				<a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark" title="Permanent Link to {{ post.url | relative_url }}">{{ post.title | escape }}</a>
 			</h1>
