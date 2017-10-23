@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	font-family: "EurostileExtTwo", $root-font-family;
-	font-size: 2rem;
+	font-size: 1.75rem;
 	font-weight: 700;
 	line-height: 1;
 	text-transform: uppercase;
@@ -84,4 +84,14 @@ ruby {
 
 code, pre {
 	font-family: "OCRA", $root-mono-family
+}
+
+.hyphenate {
+	word-break: break-all;
+	word-break: break-word;
+	hyphens: auto;
+}
+
+.ellipsis {
+	text-overflow: ellipsis;
 }
