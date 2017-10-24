@@ -52,7 +52,7 @@ main {
 }
 
 .posts>ul>li {
-		margin: 0 0 1.5em 0;
+	margin: 0 0 1.5em 0;
 }
 
 // ! Posts
@@ -98,6 +98,60 @@ main {
 
 .post-title {
 	margin-bottom: 0;
+}
+
+.related {
+	font-family: "EurostileExtTwo", $root-font-family;
+	margin: 3em 0 2em;
+}
+
+.related-title {
+	display: inline-flex;
+	padding-right: 18px;
+	margin-bottom: 1em;
+	margin-right: -1.5rem;
+	margin-left: -1.5rem;
+	background: url(/assets/chrome/neo-n-related.svg) right center no-repeat;
+	background-size: auto 100%;
+	
+	@include media-query($medium) {
+		padding-right: 26px;
+	}
+	@include media-query($large) {
+		padding-right: 40px;
+	}
+	
+	h3 {
+		display: inline-flex;
+		padding: .5em 0 .3em 1.5rem;
+		margin-bottom: 0;
+		color: $taupe;
+		background-color: $nickle;
+		font-family: inherit;
+		line-height: 1;
+		font-weight: 700;
+	}
+
+	
+}
+.related-posts {
+	text-transform: uppercase;
+	list-style: none;
+	
+	li {
+		a {
+			color: transparentize($wpOrange, 0.37);
+		}
+		&::before {
+			display: inline-block;
+			width: 1em;
+			margin-left: -1em;
+			content: "\25AF";
+			color: transparentize($wpOrange, 0.37);
+		}
+	}
+	
+
 }
 
 // ! Tags
