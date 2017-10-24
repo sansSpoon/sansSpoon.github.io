@@ -154,6 +154,23 @@ main {
 
 }
 
+.post>section p:last-of-type::after {
+	position: relative;
+	top: 0.4em;
+	padding-left: .2em;
+	content: url(/assets/chrome/neo-n-stop.svg);
+	
+	@include media-query($small) {
+		top: 0.25em;
+	}
+	@include media-query($medium) {
+		top: 0.12em;
+	}
+	@include media-query($large) {
+		top: 0;
+	}
+}
+
 // ! Tags
 // ---------------
 .post-meta>ul {
