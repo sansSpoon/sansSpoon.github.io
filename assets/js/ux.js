@@ -1,10 +1,13 @@
-
+// ! Global Variables
+// --------
 var	controlButton = document.getElementById('neo-n-s'),
 	controlStrip = document.querySelector('.strip'),
 	csWidth = controlStrip.getBoundingClientRect().width,
 	csState = "open",
 	apTags = document.getElementsByClassName('post-tags');
 
+// ! Controls Strip
+// --------
 function csOpen() {
 	controlStrip.style.removeProperty('transform');
 	csState = "open";
@@ -16,6 +19,16 @@ function csClose() {
 	csState = "closed";
 }
 
+controlButton.onclick = function() {
+	if (csState == "open") {
+		csClose();
+	} else {
+		csOpen();
+	}
+};
+
+// ! Tags
+// --------
 function tagExpand(event) {
 	if (this.dataset.tag) {
 		if (event.type == 'mouseover') {
@@ -38,15 +51,8 @@ function alignTags(apTags) {
 	}
 }
 
-controlButton.onclick = function() {
-	if (csState == "open") {
-		csClose();
-	} else {
-		csOpen();
-	}
-};
-
-// throttle windows resizing events
+// ! Throttle windows resizing events
+// --------
 (function() {
 	var throttle = function(type, name, obj) {
 		obj = obj || window;
@@ -66,7 +72,8 @@ controlButton.onclick = function() {
 	throttle("resize", "optimizedResize");
 })();
 
-// handle window resizing
+// ! Handle window resizing
+// --------
 window.addEventListener("optimizedResize", function() {
 	csWidth = controlStrip.getBoundingClientRect().width;
 	if (csState == "closed") {
@@ -75,6 +82,9 @@ window.addEventListener("optimizedResize", function() {
 	alignTags(apTags);
 });
 
+
+// ! Do Things
+// --------
 if (apTags) {
 	for (var i=0; i<apTags.length; i++) { 
 		tags = apTags[i].getElementsByTagName('li');
