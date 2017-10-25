@@ -2,7 +2,7 @@
 layout: post
 #title: Example content
 #date: 2016-01-12
-tags: [sass, css]
+tags: [sas,css]
 ---
 Sass Mixins are great for adding chunks code with arguments. This allows you to create pre&ndash;fab components and then customise their appearance when you use them throughout your site.
 

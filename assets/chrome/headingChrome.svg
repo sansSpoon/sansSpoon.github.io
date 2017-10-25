@@ -1,0 +1,40 @@
+<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+	<style>
+		#rp {
+			fill: rgba(122, 116, 97, 1);
+		}
+		.hcs {
+			stroke: rgba(122, 116, 97, 1);
+			stroke-width: 1;
+			stroke-linecap: square;
+		}
+		
+		@media (min-width: 30em) {
+			#rp {
+				fill: rgba(122, 116, 97, .7);
+			}
+			.hcs {
+				stroke: rgba(122, 116, 97, .7);
+			}
+		}
+		
+		@media (min-width: 60em) {
+			#rp {
+				fill: rgba(122, 116, 97, .5);
+			}
+			.hcs {
+				stroke: rgba(122, 116, 97, .5);
+			}
+		}
+		
+	</style>
+	<svg id="rx" viewBox="0 0 75 11" preserveAspectRatio="xMaxYMid meet">
+		<path id="rp" d="M0 5h37v1H0V5zm37-2h27v3H37V3z"/>
+		<path id="rv" class="hcs" d="M69.5.5v10"/>
+		<path id="rh" class="hcs" d="M74.5 5.5h-5"/>
+	</svg>
+	<svg id="lx" viewBox="0 0 11 11" preserveAspectRatio="xMinYMid meet">
+		<path id="lv" class="hcs" d="M5.5.5v10"/>
+		<path id="lh" class="hcs" d="M10.5 5.5H.5"/>
+	</svg>
+</svg>

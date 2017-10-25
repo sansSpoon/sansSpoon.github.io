@@ -2,7 +2,7 @@
 layout: post
 #title: Example content
 #date: 2016-01-12
-tags: [sass, css]
+tags: [sas, css]
 ---
 
 Sass Extends help reduce the amount of class names you write into HTML elements:
