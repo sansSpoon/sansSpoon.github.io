@@ -1,6 +1,9 @@
 
 // ! Reset
 // ---------
+::selection {
+	background: transparentize($color-highlight,.37);
+}
 
 *, *::before, *::after {
 	box-sizing: border-box;
