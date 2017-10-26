@@ -10,7 +10,7 @@ layout: default
 			{% comment %}tag|first = pulls first item from tag array, the name, which also includes links to posts{% endcomment %}
 			{% assign sortedTags = site_tags | split:',' | sort %}
 			{% for tag in sortedTags %}
-				<li><a href="#{{ tag | cgi_escape }}">{{ tag }} <sup>{{ site.tags[tag].size }}</sup></a></li>
+				<li class="tag"><a href="#{{ tag | cgi_escape }}">{{ tag }} <sup>{{ site.tags[tag].size }}</sup></a></li>
 			{% endfor %}
 		</ul>
 	</header>
@@ -24,7 +24,7 @@ layout: default
 					{{post.title}}</a>
 		</li>
 		{% endfor %}
-		<li class="return"><a href="#top" title="return to top">return to top</a></li>
+		<li class="return"><a href="#top" title="return to top">Return to top</a></li>
 	</ul>
 	{% endfor %}
 </section>

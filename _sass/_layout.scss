@@ -209,6 +209,38 @@ main {
 
 // ! Tags
 // ---------------
+.tags {
+	header {
+		margin-bottom: 2em;
+	}
+	h2 {
+		margin-bottom: .175em;
+	}
+	ul {
+		margin-bottom: 2em;
+	}
+}
+
+.return {
+	display: none;
+	font-family: "EurostileExtTwo", $root-font-family;
+	text-transform: uppercase;
+	
+	a {
+		font-size: 0.8rem;
+		text-decoration: none;
+		color: $wpOrange;
+	}
+	a:before {
+		content: '\25b2\00a0';
+	}
+
+}
+
+h2:target + .taglist .return {
+	display: block;
+}
+
 .post-meta>ul {
 	padding: 0;
 	margin: 0;
@@ -251,7 +283,7 @@ main {
 
 }
 
-.post-meta .tag {
+.post-tags .tag, .tag-cloud .tag {
 	@extend %tag;
 	background: $nickle;
 	transform-origin: bottom left;
@@ -275,7 +307,7 @@ main {
 	background: $wpOrange;
 }
 
-.post-meta .first-tag {
+.post-tags .first-tag, .tag-cloud .first-tag {
 	@extend %tag;
 	background: $nickle;
 	
@@ -285,7 +317,7 @@ main {
 	}
 }
 
-.post-meta .first-tag:after {
+.post-tags .first-tag:after, .tag-cloud .first-tag:after {
 	@extend %tag-after;
 	background: $nickle;
 }

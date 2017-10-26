@@ -4,7 +4,7 @@ var	controlButton = document.getElementById('neo-n-s'),
 	controlStrip = document.querySelector('.strip'),
 	csWidth = controlStrip.getBoundingClientRect().width,
 	csState = "open",
-	apTags = document.getElementsByClassName('post-tags');
+	aTags = document.querySelectorAll('.tag-cloud, .post-tags');
 
 // ! Controls Strip
 // --------
@@ -40,16 +40,32 @@ function tagExpand(event) {
 	}
 }
 
-function alignTags(apTags) {
-	for (var i=0; i<apTags.length; i++) { 
-		postTagsLoc = apTags[i].offsetLeft;
-		if (postTagsLoc == 0) {
-			apTags[i].getElementsByTagName('li')[0].className = 'first-tag';
-		} else {
-			apTags[i].getElementsByTagName('li')[0].className = 'tag';
+function alignTags(aTags) {
+	for (var i=0; i<aTags.length; i++) {
+		if (aTags[i].className == "post-tags") {
+			postTagsLoc = aTags[i].offsetLeft;
+			if (postTagsLoc == 0) {
+				aTags[i].getElementsByTagName('li')[0].className = 'first-tag';
+			} else {
+				aTags[i].getElementsByTagName('li')[0].className = 'tag';
+			}
+			
+		} else if (aTags[i].className == "tag-cloud") {
+			for (var j=0; j<aTags.length; j++) {
+				tags = aTags[j].children;
+				for (var k=0; k<tags.length; k++) {
+					tagLoc = tags[k].offsetLeft;
+					if (tagLoc == 0) {
+						tags[k].className = 'first-tag';
+					} else {
+						tags[k].className = 'tag';
+					}
+				}
+			}
 		}
 	}
 }
+
 
 // ! Throttle windows resizing events
 // --------
@@ -72,6 +88,7 @@ function alignTags(apTags) {
 	throttle("resize", "optimizedResize");
 })();
 
+
 // ! Handle window resizing
 // --------
 window.addEventListener("optimizedResize", function() {
@@ -79,22 +96,23 @@ window.addEventListener("optimizedResize", function() {
 	if (csState == "closed") {
 		csClose();
 	}
-	alignTags(apTags);
+	alignTags(aTags);
 });
 
 
 // ! Do Things
 // --------
-if (apTags) {
-	for (var i=0; i<apTags.length; i++) { 
-		tags = apTags[i].getElementsByTagName('li');
+if (aTags) {
+	for (var i=0; i<aTags.length; i++) { 
+		tags = aTags[i].getElementsByTagName('li');
 		for (var j=0; j<tags.length; j++) {
 			tags[j].firstChild.addEventListener('mouseover', tagExpand, false);
 			tags[j].firstChild.addEventListener('mouseout', tagExpand, false);
 		}
 	}
-	alignTags(apTags);
+	alignTags(aTags);
 }
+
 
 /*
 var childPos = obj.offset();
