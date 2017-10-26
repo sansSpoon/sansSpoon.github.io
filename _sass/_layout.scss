@@ -103,7 +103,29 @@ main {
 }
 
 .post-header {
+	z-index: 0;
 	margin-bottom: 1em;
+}
+
+.post-title {
+	position: relative;
+	z-index: 1;
+	margin-bottom: 0;
+}
+
+.post-title::after {
+  z-index: -1;
+  transform: translate(-2rem,-50%);
+  display: block;
+  position:absolute;
+  font-size: 2em;
+  content: attr(data-title);
+  color: transparentize($nickle,0.83);
+  line-height: 1;
+  top:50%;
+  left:0;
+  width: 200%;
+  filter: blur(2px);
 }
 
 .post-meta, .tag-cloud {
@@ -132,9 +154,6 @@ main {
 	}
 }
 
-.post-title {
-	margin-bottom: 0;
-}
 
 /* Heading styling worked in prototype, didn't work in production
 .post-body h2 {
