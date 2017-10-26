@@ -22,6 +22,7 @@ $strip-height: 6rem;
 	right: 0;
 	height: $strip-height;
 	background-color: transparent;
+	pointer-events: none;
 	
 	@include media-query($large) {
 		height: $strip-height - 1;
@@ -37,6 +38,7 @@ $strip-height: 6rem;
 	height: $strip-height;
 	@extend %base-width;
 	@extend %media-widths;
+	pointer-events: none;
 	
 	@include media-query($large) {
 		height: $strip-height - 1;
@@ -58,6 +60,7 @@ $strip-height: 6rem;
 		inset 0px 0px 4px transparentize($nickle, 0.63);
 	
 	transition: transform .5s ease-in-out;
+	pointer-events: auto;
 	
 	&:hover {
 		border: 1px solid fade_out(lighten($nickle,10%),0.11);
