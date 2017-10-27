@@ -1,15 +1,29 @@
-# Jekylton
+# jdmBlog
 
-Jekylton is a skeleton-like-framework for Jekyll. It was built as a progressive alternative to the default theme for Jekyll, dropping support for outdated browsers while improving semantic structure and accessibility.
+A brain dump of my thoughts and lessons learnt while digesting life.
 
 ## Usage
-Clone a copy of Jekylton over the top of a Jekyll site after you `jekyll new`. Version 2 will provide Jekyll theme support.
-Use of a post-processor for prefixing is required.
+This readme is a build log for notes so I can remember what the hell I did.
+
+Up unto this point I've build the blog with Jekyll 3.5.x in a very basic manner with `jekyll serve --drafts`. As I've noticed from may other users of Jekyll, this can get pretty slow when you start getting any kind of decent content. So, I'll be breaking down the build process into a few steps:
+
+-	Seperate content
+	-	I want to seperate the content from the site structure. This way I can treat the structure as a theme/template, leading to maybe posting versions available for purchase.
+	-	Content to have it's own git repo
+	-	Consider having different pipelines to drafts/posts
+		-	Markdown GUI
+-	Seperate Sass
+	-	Quicker build process
+	-	Support using Sass maps
+	-	support autoprefixer
+-	Other unforseen benefits
 
 ## Version History
 
-### 20170809 0.1
-The beta build with manual integration to an existing Jekyll site. 
+### 20171027 2.0.1
+-	Adding a NPM package.json
+	-	Exclude node_modules in _config.yml and .gitignore
+	
 
 ## License
 

@@ -1,0 +1,23 @@
+{
+  "name": "jdmblog",
+  "version": "2.1.0",
+  "description": "A blog by J. David Maclean aka sansSpoon",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sansSpoon/sansspoon.github.io.git"
+  },
+  "keywords": [
+    "blog",
+    "builder"
+  ],
+  "author": "sansSpoon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sansSpoon/sansspoon.github.io/issues"
+  },
+  "homepage": "https://github.com/sansSpoon/sansspoon.github.io#readme"
+}
