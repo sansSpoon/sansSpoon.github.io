@@ -2,7 +2,7 @@
 layout: post
 #title: Sass nesting and the Parent selector
 #date: 2017-01-16
-tags: [sas, css]
+tags: [sass,css]
 ---
 
 ## Nested Rules

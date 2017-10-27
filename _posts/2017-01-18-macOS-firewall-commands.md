@@ -2,7 +2,7 @@
 layout: post
 #title: macOS firewall and Air Drop
 #date: 2017-01-18
-tags: [mac,sec]
+tags: [macos,security]
 ---
 
 I use Air Drop built into macOS to quickly transfer files from one computer to another on the local network. I also like locking down my firewall. It was annoying me that when I wanted to transfer a file I had to go to Apple Menu > System Preferences > Security \| Authenticate \| > Firewall > Firewall Options > Untick "Block all incomming connections".
