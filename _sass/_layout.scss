@@ -13,7 +13,6 @@ main {
 	@extend %media-widths;
 }
 
-
 .site-content {
 	padding-top: 7rem;
 }
@@ -47,6 +46,7 @@ main {
 		transform: skew(-31deg);
 		background-color: darken($color-bg,10%);
 	}
+	
 	section::after {
 		position: absolute;
 		z-index: -1;
@@ -58,6 +58,7 @@ main {
 		background-color: darken($color-bg,10%);
 	}
 }
+
 
 // ! Home
 // ---------------
@@ -90,6 +91,7 @@ main {
 .posts>ul>li {
 	margin: 0 0 1.5em 0;
 }
+
 
 // ! Posts
 // ---------------
@@ -154,22 +156,19 @@ main {
 	}
 }
 
-
-/* Heading styling worked in prototype, didn't work in production
 .post-body h2 {
 	position: relative;
 }
 
 .post-body h2::after {
 	position: absolute;
-	right: -2.25em; top: 0; width: 2em; height: 100%;
+	right: -2.75em; top: -5%; width: 2em; height: 110%;
 	border-radius: 4px;
 	content: "";
-	transform-origin: bottom left;
-	transform: skew(-17deg);
-	background-color: transparentize($wpOrange,.37);
+	transform-origin: top left;
+	transform: skew(-13deg);
+	background-color: transparentize($wpOrange,.63);
 }
-*/
 
 .related {
 	font-family: "EurostileExtTwo", $root-font-family;
@@ -202,9 +201,8 @@ main {
 		line-height: 1;
 		font-weight: 700;
 	}
-
-	
 }
+
 .related-posts {
 	text-transform: uppercase;
 	list-style: none;
@@ -221,11 +219,9 @@ main {
 			color: transparentize($wpOrange, 0.37);
 		}
 	}
-	
-
 }
 
-/*
+/* paragraph sign-off. Disabling, can't effectively select last para without javascript.
 .post>section p:last-of-type::after {
 	position: relative;
 	top: 0.4em;
@@ -244,6 +240,7 @@ main {
 }
 */
 
+
 // ! Tags
 // ---------------
 .tags {
@@ -256,26 +253,6 @@ main {
 	ul {
 		margin-bottom: 2em;
 	}
-}
-
-.return {
-	display: none;
-	font-family: "EurostileExtTwo", $root-font-family;
-	text-transform: uppercase;
-	
-	a {
-		font-size: 0.8rem;
-		text-decoration: none;
-		color: $wpOrange;
-	}
-	a:before {
-		content: '\25b2\00a0';
-	}
-
-}
-
-h2:target + .taglist .return {
-	display: block;
 }
 
 .post-meta>ul {
@@ -317,7 +294,6 @@ h2:target + .taglist .return {
 	@include media-query($large) {
 		border-radius: 4px;
 	}
-
 }
 
 .post-tags .tag, .tag-cloud .tag {
@@ -357,4 +333,23 @@ h2:target + .taglist .return {
 .post-tags .first-tag:after, .tag-cloud .first-tag:after {
 	@extend %tag-after;
 	background: $nickle;
+}
+
+.return {
+	display: none;
+	font-family: "EurostileExtTwo", $root-font-family;
+	text-transform: uppercase;
+	
+	a {
+		font-size: 0.8rem;
+		text-decoration: none;
+		color: $wpOrange;
+	}
+	a:before {
+		content: '\25b2\00a0';
+	}
+}
+
+h2:target + .taglist .return {
+	display: block;
 }
