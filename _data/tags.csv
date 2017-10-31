@@ -1,6 +1,7 @@
 tag,name
 ajx,ajax
 anm,animation
+apf,autoprefixer
 aph,apache
 apl,apple
 chr,chrome
@@ -10,6 +11,7 @@ css,css
 dtl,devtools
 ghb,github
 git,git
+gnt,grunt
 htm,html
 ios,ios
 jkl,jekyll
@@ -20,6 +22,7 @@ lqd,liquid
 mac,macos
 mgo,magento
 nde,node
+npm,npm
 nix,unix
 nts,notes
 sas,sass
