@@ -19,10 +19,10 @@ analytics_id:        UA-92019002-1
 contentPath:         "/content" #for richmedia content
 
 # Build settings
-sass:
-  sass_dir:          _sass
-  style:             nested #nested|compact|expanded|compressed
-  sourcemap:         true
+#sass:
+#  sass_dir:          _sass
+#  style:             nested #nested|compact|expanded|compressed
+#  sourcemap:         true
 
 permalink:           pretty
 markdown:            kramdown
@@ -39,12 +39,14 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-toc
-  - octopress-autoprefixer
+# - octopress-autoprefixer
 # - jekyll-paginate
 # - jekyll-gist
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
+  - _css
+  - _sass
 include:
   - _pages

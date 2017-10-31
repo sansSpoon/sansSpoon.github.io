@@ -4,7 +4,12 @@
   "description": "A blog by J. David Maclean aka sansSpoon",
   "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-watch": "sass --watch _sass/:_css/ --sourcemap=auto",
+    "apf-watch": "postcss _css/*.css --use autoprefixer -d assets/css/ --watch",
+    "jekyll-watch": "jekyll serve --host 192.168.2.69 --drafts",
+    "sass-only": "npm run sass-watch & npm run apf-watch",
+    "watch-all": "npm run sass-watch & npm run apf-watch & npm run jekyll-watch"
   },
   "repository": {
     "type": "git",

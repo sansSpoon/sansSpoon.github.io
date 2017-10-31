@@ -3,6 +3,7 @@ _gh_pages
 _site
 _drafts
 _dev
+_css
 .ruby-version
 .sass-cache
 .jekyll-metadata
