@@ -3,6 +3,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>{% if page.title %}{{ page.title | escape }} // {{ site.title | escape }}{% else %}{{ site.title | escape }} // {{ site.tagline | escape }}{% endif %}</title>
+	
+	<script type="text/javascript">
+		// Internet Explorer 6-11
+		var isIE = /*@cc_on!@*/false || !!document.documentMode;
+		// Edge 20+
+		var isEdge = !isIE && !!window.StyleMedia;
+		window.onload = function() {
+			if (isIE || isEdge) {
+				var links = document.querySelectorAll('link[rel=stylesheet]');
+				for(var i=0;i<links.length;i++){
+					links[i].parentNode.removeChild(links[i]);
+				}
+				var nah = document.body;
+				nah.innerHTML = '<h1>Yeah, Nah.</h1><p>Your going to need a better browser mate.</p><p>Try: <a href="https://www.google.com/chrome/browser">Chrome</a> or <a href="https://www.mozilla.org/firefox/new/">Firefox</a></p>';
+			}
+		}
+	</script>
 
 	<meta name="description" content="{% if page.description %}{{ page.description | strip_html | normalize_whitespace | truncate: 160 | escape }}{% else %}{{ site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}{% endif %}" />
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
