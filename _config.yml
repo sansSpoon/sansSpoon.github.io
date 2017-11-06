@@ -46,7 +46,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - _css
-  - _sass
+  - _build
 include:
   - _pages

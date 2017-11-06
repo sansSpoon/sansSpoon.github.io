@@ -1,0 +1,634 @@
+/* !Import SASS partials */
+/*
+	Based on 16pt font-size
+	
+	$micro: 17em; // max wearables
+	$xsmall: 20em; // 320px min default-no-media-query
+	$small: 30em; // 480px min
+	$medium: 60em; // 960px min
+	$large: 90em; // 1440 px min
+	$xlarge: 120em; // 1920px min
+	$xxlarge: 160em; // 2560px min	
+*/
+.site-content, .site-footer, .site-header-bg, .fixed-strip {
+  max-width: 20rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: auto;
+  margin-right: auto; }
+
+@media (min-width: 30em) {
+  .site-content, .site-footer, .site-header-bg, .fixed-strip {
+    max-width: 34rem; } }
+@media (min-width: 60em) {
+  .site-content, .site-footer, .site-header-bg, .fixed-strip {
+    max-width: 44rem; } }
+@media (min-width: 90em) {
+  .site-content, .site-footer, .site-header-bg, .fixed-strip {
+    max-width: 37rem; } }
+
+@font-face {
+  font-family: 'EurostileExtTwo';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Eurostile LT Std Extended 2"), local("EurostileLTStd-Ex2"), url("/assets/font/EurostileLTStd-Ex2.woff") format("woff"); }
+@font-face {
+  font-family: 'EurostileExtTwo';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Eurostile LT Std Bold Extended 2"), local("EurostileLTStd-BoldEx2"), url("/assets/font/EurostileLTStd-BoldEx2.woff") format("woff"); }
+@font-face {
+  font-family: 'Exo 2 Bold Expanded';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Exo 2 Bold Expanded"), local("Exo2-BoldExpanded"), url("/assets/font/Exo2-BoldExpanded.woff") format("woff"); }
+@font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Exo 2 Regular"), local("Exo2-Regular"), url("/assets/font/Exo2-Regular.woff") format("woff"); }
+@font-face {
+  font-family: 'Exo 2';
+  font-style: italic;
+  font-weight: 400;
+  src: local("Exo 2 Italic"), local("Exo2-Italic"), url("/assets/font/Exo2-Italic.woff") format("woff"); }
+@font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Exo 2 Bold"), local("Exo2-Bold"), url("/assets/font/Exo2-Bold.woff") format("woff"); }
+@font-face {
+  font-family: 'Exo 2';
+  font-style: italic;
+  font-weight: 700;
+  src: local("Exo 2 Bold Italic"), local("Exo2-BoldItalic"), url("/assets/font/Exo2-BoldItalic.woff") format("woff"); }
+@font-face {
+  font-family: 'OCRA';
+  font-style: normal;
+  font-weight: normal;
+  src: local("OCR A Std Regular"), local("OCRAStd"), url("/assets/font/OCRAStd.woff") format("woff"); }
+@font-face {
+  font-family: 'Mplus';
+  font-style: normal;
+  font-weight: 400;
+  src: local("M+ 1mn"), local("mplus-1mn-regular"), url("/assets/font/mplus-1mn-regular.woff") format("woff"); }
+@font-face {
+  font-family: 'Mplus';
+  font-style: normal;
+  font-weight: 700;
+  src: local("M+ 1mn bold"), local("mplus-1mn-bold"), url("/assets/font/mplus-1mn-bold.woff") format("woff"); }
+::selection {
+  background: rgba(2, 172, 198, 0.63); }
+
+*, *::before, *::after {
+  box-sizing: border-box; }
+
+html, body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, dd, figure {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-family: "Exo 2", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5; }
+  @media (min-width: 30em) {
+    html {
+      font-size: 1.25rem; } }
+  @media (min-width: 60em) {
+    html {
+      font-size: 1.5rem; } }
+  @media (min-width: 90em) {
+    html {
+      font-size: 2.5rem; } }
+
+body {
+  color: #e5e0e0;
+  background: #25201b url(/assets/chrome/randomHexOpacityTileNormaliseLightMin.svg) repeat fixed;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1, "dlig" 1, "swsh" 1;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+a {
+  color: #fda877;
+  text-decoration: none; }
+  a:hover, a:focus {
+    text-decoration: underline; }
+
+img {
+  max-width: 100%;
+  display: block; }
+
+table {
+  width: 100%;
+  border: 1px solid #e5e0e0;
+  border-collapse: collapse;
+  margin-top: .25em;
+  margin-bottom: .25em; }
+
+td, th {
+  border: 1px solid #e5e0e0; }
+
+pre {
+  white-space: pre-wrap; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #c1bdbd;
+  margin-top: 0;
+  margin-bottom: .5rem; }
+
+h1 {
+  font-family: "EurostileExtTwo", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase; }
+
+h2 {
+  font-family: "EurostileExtTwo", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase; }
+
+h3 {
+  font-family: "Exo 2 Bold Expanded", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: uppercase; }
+
+h4, h5, h6 {
+  font-family: "Exo 2", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  font-weight: 700; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem; }
+
+strong {
+  color: white; }
+
+ol, ul, dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 1rem; }
+
+ol ol, ul ul, ol ul, ul ol {
+  margin-bottom: 0; }
+
+dt {
+  font-weight: bold; }
+
+dd {
+  margin-bottom: .5rem; }
+
+abbr {
+  font-size: 73%;
+  text-transform: uppercase;
+  font-weight: bold; }
+  abbr[title] {
+    cursor: help;
+    text-decoration: none;
+    border-bottom: 1px dotted #e5e0e0; }
+
+ruby {
+  font-family: "Mplus", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; }
+
+code, pre {
+  font-family: "OCRA", "SFMono-Light", Menlo, Monaco, "Ubuntu Mono", monospace; }
+
+.hyphenate {
+  word-break: break-all;
+  word-break: break-word;
+  hyphens: auto; }
+
+.ellipsis {
+  text-overflow: ellipsis; }
+
+.note {
+  padding: 0.5rem 0.25rem 0.5rem 1.5rem;
+  margin: 1rem 0;
+  color: #cec4c4;
+  background-image: repeating-linear-gradient(45deg, #423931, #423931 3px, #25201b 3px, #25201b 6px);
+  background-color: #3f362f;
+  background-size: 9px 100%;
+  background-repeat: no-repeat; }
+  .note p:first-child {
+    margin-top: 0; }
+  .note p:last-child {
+    margin-bottom: 0; }
+
+.note::before {
+  content: "NOTE: ";
+  font-weight: 700; }
+
+main {
+  overflow: hidden; }
+
+.site-content, .site-footer {
+  background-color: #423931; }
+
+.site-content {
+  padding-top: 7rem; }
+
+.site-footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 1em; }
+  .site-footer a {
+    color: rgba(247, 92, 3, 0.63); }
+  .site-footer section {
+    position: relative;
+    z-index: 0;
+    width: 80%;
+    padding: .5rem .25rem;
+    text-align: center;
+    background-color: #25201b;
+    font-size: .75em; }
+  .site-footer section::before {
+    position: absolute;
+    z-index: -1;
+    left: -2em;
+    top: 0;
+    width: 2em;
+    height: 100%;
+    border-radius: 6px 0 0 0;
+    content: "";
+    transform-origin: bottom left;
+    transform: skew(-31deg);
+    background-color: #25201b; }
+  .site-footer section::after {
+    position: absolute;
+    z-index: -1;
+    right: -2em;
+    top: 0;
+    width: 2em;
+    height: 100%;
+    border-radius: 0 6px 0 0;
+    content: "";
+    transform-origin: bottom left;
+    transform: skew(31deg);
+    background-color: #25201b; }
+
+.post-title a {
+  color: #c1bdbd;
+  transition: all .25s; }
+  .post-title a:hover {
+    text-decoration: none;
+    color: #e1dfdf; }
+
+.hc {
+  position: relative;
+  width: 100%;
+  height: 11px;
+  margin: 0 -0.25em 1.5em -0.25em; }
+  @media (min-width: 30em) {
+    .hc {
+      height: 16px; } }
+  @media (min-width: 90em) {
+    .hc {
+      height: 22px; } }
+
+.posts > ul > li {
+  margin: 0 0 1.5em 0; }
+
+.posts ul, .tags ul, .related ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+.post-header {
+  z-index: 0;
+  margin-bottom: 1em; }
+
+.post-title {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0; }
+
+.post-title::after {
+  z-index: -1;
+  transform: translate(-2rem, -50%);
+  display: block;
+  position: absolute;
+  font-size: 2em;
+  content: attr(data-title);
+  color: rgba(122, 116, 97, 0.17);
+  line-height: 1;
+  top: 50%;
+  left: 0;
+  width: 200%;
+  filter: blur(2px); }
+
+.post-meta, .tag-cloud {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "EurostileExtTwo", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: .75em;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase; }
+  .post-meta time, .tag-cloud time {
+    margin-right: .5em; }
+  .post-meta ul, .tag-cloud ul {
+    display: flex;
+    list-style: none; }
+  .post-meta li, .tag-cloud li {
+    margin-right: .5em; }
+  .post-meta li:last-child, .tag-cloud li:last-child {
+    margin-right: 0; }
+
+.post-body h2 {
+  position: relative; }
+
+.post-body h2::after {
+  position: absolute;
+  right: -2.75em;
+  top: -5%;
+  width: 2em;
+  height: 110%;
+  border-radius: 4px;
+  content: "";
+  transform-origin: top left;
+  transform: skew(-13deg);
+  background-color: rgba(247, 92, 3, 0.37); }
+
+.related {
+  font-family: "EurostileExtTwo", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  margin: 3em 0 2em; }
+
+.related-title {
+  display: inline-flex;
+  padding-right: 18px;
+  margin-bottom: 1em;
+  margin-right: -1.5rem;
+  margin-left: -1.5rem;
+  background: url(/assets/chrome/neo-n-related.svg) right center no-repeat;
+  background-size: auto 100%; }
+  @media (min-width: 60em) {
+    .related-title {
+      padding-right: 26px; } }
+  @media (min-width: 90em) {
+    .related-title {
+      padding-right: 40px; } }
+  .related-title h3 {
+    display: inline-flex;
+    padding: .5em 0 .3em 1.5rem;
+    margin-bottom: 0;
+    color: #423931;
+    background-color: #7a7461;
+    font-family: inherit;
+    line-height: 1;
+    font-weight: 700; }
+
+.related-posts {
+  text-transform: uppercase;
+  list-style: none; }
+  .related-posts li a {
+    color: rgba(247, 92, 3, 0.63); }
+  .related-posts li::before {
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    content: "\25AF";
+    color: rgba(247, 92, 3, 0.63); }
+
+/* paragraph sign-off. Disabling, can't effectively select last para without javascript.
+.post>section p:last-of-type::after {
+	position: relative;
+	top: 0.4em;
+	padding-left: .2em;
+	content: url(/assets/chrome/neo-n-stop.svg);
+	
+	@include media-query($small) {
+		top: 0.25em;
+	}
+	@include media-query($medium) {
+		top: 0.12em;
+	}
+	@include media-query($large) {
+		top: 0;
+	}
+}
+*/
+.tags header {
+  margin-bottom: 2em; }
+.tags h2 {
+  margin-bottom: .175em; }
+.tags ul {
+  margin-bottom: 2em; }
+
+.post-meta > ul {
+  padding: 0;
+  margin: 0; }
+
+.post-tags .tag, .tag-cloud .tag, .post-meta > time, .post-tags .first-tag, .tag-cloud .first-tag {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 0.25em 0.75em 0 0.75em;
+  border-radius: 2px;
+  margin-right: 0.25em;
+  margin-bottom: 0.25em; }
+  @media (min-width: 60em) {
+    .post-tags .tag, .tag-cloud .tag, .post-meta > time, .post-tags .first-tag, .tag-cloud .first-tag {
+      border-radius: 3px; } }
+  @media (min-width: 90em) {
+    .post-tags .tag, .tag-cloud .tag, .post-meta > time, .post-tags .first-tag, .tag-cloud .first-tag {
+      border-radius: 4px; } }
+
+.post-meta > time:after, .post-tags .first-tag:after, .tag-cloud .first-tag:after {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  content: "";
+  transform-origin: bottom left;
+  transform: skew(-31deg); }
+  @media (min-width: 60em) {
+    .post-meta > time:after, .post-tags .first-tag:after, .tag-cloud .first-tag:after {
+      border-radius: 3px; } }
+  @media (min-width: 90em) {
+    .post-meta > time:after, .post-tags .first-tag:after, .tag-cloud .first-tag:after {
+      border-radius: 4px; } }
+
+.post-tags .tag, .tag-cloud .tag {
+  background: #7a7461;
+  transform-origin: bottom left;
+  transform: skew(-31deg); }
+  .post-tags .tag a, .tag-cloud .tag a {
+    color: #423931;
+    text-decoration: none;
+    transform: skew(31deg); }
+
+.post-meta > time {
+  background: #f75c03;
+  color: #423931; }
+
+.post-meta > time:after {
+  background: #f75c03; }
+
+.post-tags .first-tag, .tag-cloud .first-tag {
+  background: #7a7461; }
+  .post-tags .first-tag a, .tag-cloud .first-tag a {
+    color: #423931;
+    text-decoration: none; }
+
+.post-tags .first-tag:after, .tag-cloud .first-tag:after {
+  background: #7a7461; }
+
+.return {
+  display: none;
+  font-family: "EurostileExtTwo", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  text-transform: uppercase; }
+  .return a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #f75c03; }
+  .return a:before {
+    content: '\25b2\00a0'; }
+
+h2:target + .taglist .return {
+  display: block; }
+
+.site-header-bg {
+  z-index: -1;
+  height: 6rem;
+  background-color: #423931;
+  content: ""; }
+  @media (min-width: 90em) {
+    .site-header-bg {
+      height: 5rem; } }
+
+.site-header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6rem;
+  background-color: transparent;
+  pointer-events: none; }
+  @media (min-width: 90em) {
+    .site-header {
+      height: 5rem; } }
+
+.fixed-strip {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 6rem;
+  pointer-events: none; }
+  @media (min-width: 90em) {
+    .fixed-strip {
+      height: 5rem; } }
+
+.strip {
+  position: absolute;
+  z-index: 1000;
+  left: -1px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 67%;
+  height: 60px;
+  border: 1px solid rgba(122, 116, 97, 0.73);
+  background-color: rgba(122, 116, 97, 0.31);
+  box-shadow: 0px 0px 2px rgba(122, 116, 97, 0.61), inset 0px 0px 4px rgba(122, 116, 97, 0.37);
+  transition: transform .5s ease-in-out;
+  pointer-events: auto; }
+  .strip:hover {
+    border: 1px solid rgba(149, 142, 121, 0.89);
+    background-color: rgba(122, 116, 97, 0.31);
+    box-shadow: 0px 0px 2px rgba(122, 116, 97, 0.61), 0px 0px 6px rgba(122, 116, 97, 0.73), inset 0px 0px 4px rgba(122, 116, 97, 0.37); }
+  @media (min-width: 60em) {
+    .strip {
+      height: 80px; } }
+  @media (min-width: 90em) {
+    .strip {
+      width: 53%;
+      height: 80px; } }
+  .strip h1 {
+    padding: 0;
+    margin: 0;
+    color: rgba(149, 142, 121, 0.47);
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    font-family: "EurostileExtTwo", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1;
+    letter-spacing: -0.075em;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 3px rgba(122, 116, 97, 0.53); }
+    .strip h1:hover {
+      color: rgba(149, 142, 121, 0.73);
+      text-shadow: 0px 0px 2px rgba(122, 116, 97, 0.53); }
+    .strip h1 .first {
+      padding-left: .15em;
+      font-size: .75rem;
+      letter-spacing: 1.3em; }
+    .strip h1 .kern {
+      letter-spacing: -.12em; }
+    @media (min-width: 90em) {
+      .strip h1 {
+        font-size: 1.0rem; }
+        .strip h1 .first {
+          font-size: .5rem; } }
+  .strip a {
+    text-decoration: none; }
+    .strip a:hover {
+      text-decoration: none; }
+
+.stripClosed {
+  transform: translateX(-67%); }
+  @media (min-width: 90em) {
+    .stripClosed {
+      transform: translateX(-53%); } }
+
+#neo-n {
+  position: absolute;
+  top: -18px;
+  right: -55px;
+  width: 64px;
+  height: 94px; }
+  @media (min-width: 60em) {
+    #neo-n {
+      position: absolute;
+      top: -14px;
+      right: -73px;
+      width: 86px;
+      height: 106px; } }
+
+#neo-n-s {
+  cursor: pointer; }
+
+#neo-n-s #poly-off {
+  opacity: 1; }
+
+#neo-n-s #poly-on {
+  opacity: 0; }
+
+@media (hover) {
+  #neo-n-s:hover #poly-off {
+    opacity: 0; } }
+
+@media (hover) {
+  #neo-n-s:hover #poly-on {
+    opacity: 1; } }
+
+/*# sourceMappingURL=styles.css.map */
