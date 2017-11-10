@@ -1,28 +1,51 @@
 {
-  "name": "jdmblog",
-  "version": "2.1.0",
-  "description": "A blog by J. David Maclean aka sansSpoon",
-  "main": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass-watch": "sass --watch _build/_sass/:_build/_css/ --sourcemap=auto",
-    "apf-watch": "postcss _build/_css/*.css --use autoprefixer -d assets/css/ --watch",
-    "jekyll-watch": "jekyll serve --host 192.168.2.69 --drafts",
-    "sass-only": "npm run sass-watch & npm run apf-watch",
-    "watch-all": "npm run sass-watch & npm run apf-watch & npm run jekyll-watch"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sansSpoon/sansspoon.github.io.git"
-  },
-  "keywords": [
-    "blog",
-    "builder"
-  ],
-  "author": "sansSpoon",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sansSpoon/sansspoon.github.io/issues"
-  },
-  "homepage": "https://github.com/sansSpoon/sansspoon.github.io#readme"
+	"name": "jdmblog",
+	"version": "2.1.0",
+	"description": "A blog by J. David Maclean aka sansSpoon",
+	"main": "",
+	"author": "sansSpoon",
+	"license": "MIT",
+	"homepage": "https://github.com/sansSpoon/sansspoon.github.io#readme",
+	"keywords": [
+		"blog",
+		"builder"
+	],
+	"scripts": {
+		"css": "npm-run-all css:lint css:compile css:prefix",
+		"css:lint": "scss-lint --config .scss-lint.yml _sass/*.scss",
+		"css:compile": "sass _sass/styles.scss assets/css/styles.css --sourcemap=auto --style nested",
+		"css:prefix": "postcss assets/css/styles.css --use autoprefixer --replace",
+		"css:watch": "watch 'npm run css' _sass/",
+		"css:watch-quick": "watch 'npm run css:compile' _sass/",
+		
+		"docs": "./_build/_syncContent.sh",
+		"docs:draft": "./_build/_syncContent.sh dft",
+		"docs:posts": "./_build/_syncContent.sh pst",
+		"docs:sample": "./_build/_syncContent.sh spl",
+		"docs:watch": "watch './_build/_syncContent.sh' ~/Documents/_blog/",
+		"docs:watch-quick": "watch './_build/_syncContent.sh dft' ~/Documents/_blog/",
+		
+		"jekyll:dev": "jekyll serve --host 192.168.2.69 --drafts",
+		"jekyll:dist": "JEKYLL_ENV=production jekyll build",
+		
+		"dev:": "npm-run-all --parallel css:watch docs:watch jekyll:dev",
+		"dev:quick": "npm-run-all --parallel css:watch-quick docs:watch-quick jekyll:dev",
+		
+		"dist": "npm run css && npm run docs:posts && jekyll:dist"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sansSpoon/sansspoon.github.io.git"
+	},
+	"bugs": {
+		"url": "https://github.com/sansSpoon/sansspoon.github.io/issues"
+	},
+	"browserslist": [
+		"Chrome >= 45",
+		"Firefox >= 27",
+		"not Edge < 200",
+		"not IE < 200",
+		"iOS >= 7",
+		"Safari >= 7"
+	]
 }
