@@ -31,7 +31,7 @@
 		"dev": "npm-run-all --parallel css:watch-quick docs:watch jekyll:dev",
 		"dev:all": "npm-run-all --parallel css:watch docs:watch jekyll:dev",
 		
-		"dist": "npm run css && npm run docs:posts && jekyll:dist"
+		"dist": "npm run css && npm run docs:posts && npm run jekyll:dist"
 	},
 	"repository": {
 		"type": "git",
