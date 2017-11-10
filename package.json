@@ -16,7 +16,7 @@
 		"css:compile": "sass _sass/styles.scss assets/css/styles.css --sourcemap=auto --style nested",
 		"css:prefix": "postcss assets/css/styles.css --use autoprefixer --replace",
 		"css:watch": "watch 'npm run css' _sass/",
-		"css:watch-quick": "watch 'npm run css:compile' _sass/",
+		"css:watch-quick": "sass --watch _sass/styles.scss:assets/css/styles.css --sourcemap=auto --style nested",
 		
 		"docs": "./_build/_syncContent.sh",
 		"docs:draft": "./_build/_syncContent.sh dft",
