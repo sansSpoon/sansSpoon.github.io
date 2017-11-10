@@ -12,7 +12,7 @@ set -o errexit
 set -o nounset
 
 DATE=`date "+%Y%m%d-%H%M%S"`
-SRC=$HOME/_blog
+SRC=$HOME/Documents/_blog
 DST=$HOME/Sites/jdmBlog
 
 # Build a list of common rsync parameters
@@ -23,13 +23,12 @@ params=(
 	--exclude=Cache/
 	--delete-excluded
 	--progress
-	--stats
 )
 
 function drafts {
 	if [ -d "$SRC/_drafts" -a -d "$DST/_drafts" ]; then
 		echo "==== Syncing Drafts ===="
-		rsync -avhXr ${params[@]} --log-file=$LOGFILE $SRC/_drafts/ $DST/_drafts/
+		rsync -avhXr ${params[@]} $SRC/_drafts/ $DST/_drafts/
 	else
 		echo "==== Paths '$SRC/_drafts/ > $DST/_drafts/' not found ===="
 		exit 1
@@ -38,7 +37,7 @@ function drafts {
 function posts {
 	if [ -d "$SRC/_posts" -a -d "$DST/_posts" ]; then
 		echo "==== Syncing Posts ===="
-		rsync -avhXr ${params[@]} --log-file=$LOGFILE $SRC/_posts/ $DST/_posts/
+		rsync -avhXr ${params[@]} $SRC/_posts/ $DST/_posts/
 	else
 		echo "==== Paths '$SRC/_posts/ > $DST/_posts/' not found ===="
 		exit 1
@@ -47,7 +46,7 @@ function posts {
 function sample {
 	if [ -d "$SRC/_sample" -a -d "$DST/_drafts" ]; then
 		echo "==== Syncing Sample ===="
-		rsync -avhXr ${params[@]} --log-file=$LOGFILE $SRC/_sample/ $DST/_drafts/
+		rsync -avhXr ${params[@]} $SRC/_sample/ $DST/_drafts/
 	else
 		echo "==== Paths '$SRC/_sample/ > $DST/_drafts/' not found ===="
 		exit 1
@@ -56,7 +55,7 @@ function sample {
 function content {
 	if [ -d "$SRC/content" -a -d "$DST/content" ]; then
 		echo "==== Syncing Content ===="
-		rsync -avhXr ${params[@]} --log-file=$LOGFILE $SRC/content/ $DST/content/
+		rsync -avhXr ${params[@]} $SRC/content/ $DST/content/
 	else
 		echo "==== Paths '$SRC/content/ > $DST/content/' not found ===="
 		exit 1
@@ -74,18 +73,18 @@ elif [[ $# == 1 ]]; then
 		'dft')
 			drafts;
 			content;
-			rm $DST/_posts/*;
+			rm -f $DST/_posts/*;
 			exit 0
 			;;
 		'pst')
 			posts;
 			content;
-			rm $DST/_drafts/*;
+			rm -f $DST/_drafts/*;
 			exit 0
 			;;
 		'spl')
 			sample;
-			rm $DST/_posts/*;
+			rm -f $DST/_posts/*;
 			exit 0
 			;;
 		*)

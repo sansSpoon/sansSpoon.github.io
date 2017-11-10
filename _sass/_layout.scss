@@ -116,18 +116,18 @@ main {
 }
 
 .post-title::after {
-  z-index: -1;
-  transform: translate(-2rem,-50%);
-  display: block;
-  position:absolute;
-  font-size: 2em;
-  content: attr(data-title);
-  color: transparentize($nickle,0.83);
-  line-height: 1;
-  top:50%;
-  left:0;
-  width: 200%;
-  filter: blur(2px);
+	z-index: -1;
+	transform: translate(-2rem,-50%);
+	display: block;
+	position:absolute;
+	font-size: 2em;
+	content: attr(data-title);
+	color: transparentize($nickle,0.83);
+	line-height: 1;
+	top: 50%;
+	left: 0;
+	width: 200%;
+	filter: blur(2px);
 }
 
 .post-meta, .tag-cloud {

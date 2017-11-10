@@ -3,15 +3,14 @@ $strip-height: 6rem;
 .site-header-bg {
 	z-index: -1;
 	height: $strip-height;
-	@extend %base-width;
-	background-color: $color-bg;
 	content: "";
+	background-color: $color-bg;
+	@extend %base-width;
 	@extend %media-widths;
 	
 	@include media-query($large) {
 		height: $strip-height - 1;
 	}
-
 }
 
 .site-header {
