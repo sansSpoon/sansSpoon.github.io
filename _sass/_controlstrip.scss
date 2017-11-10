@@ -3,11 +3,12 @@ $strip-height: 6rem;
 .site-header-bg {
 	z-index: -1;
 	height: $strip-height;
-	content: "";
 	background-color: $color-bg;
+	content: "";
+
 	@extend %base-width;
 	@extend %media-widths;
-	
+
 	@include media-query($large) {
 		height: $strip-height - 1;
 	}
@@ -17,12 +18,12 @@ $strip-height: 6rem;
 	position: fixed;
 	z-index: 10;
 	top: 0;
-	left: 0;
 	right: 0;
+	left: 0;
 	height: $strip-height;
 	background-color: transparent;
 	pointer-events: none;
-	
+
 	@include media-query($large) {
 		height: $strip-height - 1;
 	}
@@ -38,7 +39,7 @@ $strip-height: 6rem;
 	@extend %base-width;
 	@extend %media-widths;
 	pointer-events: none;
-	
+
 	@include media-query($large) {
 		height: $strip-height - 1;
 	}
@@ -47,92 +48,89 @@ $strip-height: 6rem;
 .strip {
 	position: absolute;
 	z-index: 1000;
-	left: -1px;	
+	left: -1px;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
 	width: 67%;
 	height: 60px;
-	border: 1px solid fade_out($nickle,0.27);
-	background-color: fade_out($nickle,0.69);
-	box-shadow: 0px 0px 2px transparentize($nickle, 0.39),
-		inset 0px 0px 4px transparentize($nickle, 0.63);
-	
-	transition: transform .5s ease-in-out;
+	background-color: transparentize($nickle, .69);
+	border: 1px solid transparentize($nickle, .27);
+	box-shadow: 0 0 2px transparentize($nickle, .39),
+		inset 0 0 4px transparentize($nickle, .63);
 	pointer-events: auto;
-	
+	transition: transform .5s ease-in-out;
+
 	&:hover {
-		border: 1px solid fade_out(lighten($nickle,10%),0.11);
-		background-color: fade_out($nickle,0.69);
-		box-shadow: 0px 0px 2px transparentize($nickle, 0.39),
-			0px 0px 6px transparentize($nickle, 0.27),
-			inset 0px 0px 4px transparentize($nickle, 0.63);
+		background-color: transparentize($nickle, .69);
+		border: 1px solid transparentize(lighten($nickle,10%), .11);
+		box-shadow: 0 0 2px transparentize($nickle, .39),
+			0 0 6px transparentize($nickle, .27),
+			inset 0 0 4px transparentize($nickle, .63);
 	}
-	
+
 	@include media-query($medium) {
 		height: 80px;
 	}
-	
+
 	@include media-query($large) {
 		width: 53%;
 		height: 80px;
 	}
-	
+
 	h1 {
 		padding: 0;
 		margin: 0;
-		color: transparentize(lighten($nickle,10%),0.53);
-		font-feature-settings: "kern" 1;
-		font-kerning: normal;
 		font-family: "EurostileExtTwo", $root-font-family;
-		font-weight: 700;
 		font-size: 1.5rem;
 		line-height: 1;
-		letter-spacing: -0.075em;
+		font-weight: 700;
+		font-feature-settings: "kern" 1;
+		font-kerning: normal;
 		text-transform: uppercase;
-		text-shadow: 0px 0px 3px transparentize($nickle, 0.47);
-		
+		text-shadow: 0 0 3px transparentize($nickle, .47);
+		letter-spacing: -.075em;
+		color: transparentize(lighten($nickle,10%), .53);
+
 		&:hover {
-			color: transparentize(lighten($nickle,10%),0.27);
-			text-shadow: 0px 0px 2px transparentize($nickle, 0.47);
+			text-shadow: 0 0 2px transparentize($nickle, .47);
+			color: transparentize(lighten($nickle,10%), .27);
 		}
-		
+
 		.first {
 			padding-left: .15em;
 			font-size: .75rem;
 			letter-spacing: 1.3em;
-			
 		}
-		
+
 		.kern {
 			letter-spacing: -.12em;
 		}
-		
+
 		@include media-query($large) {
-			font-size: 1.0rem;
+			font-size: 1rem;
 			.first {
 				font-size: .5rem;
 			}
 		}
-
 	}
-	
+
 	a {
 		text-decoration: none;
 		&:hover {
 			text-decoration: none;
 		}
 	}
-
 }
 
-.stripClosed {
-	transform: translateX(-67%);
-	
-	@include media-query($large) {
-		transform: translateX(-53%);
-	}
-}
+// // No longer needed, consider removing
+//.strip-closed {
+//	transform: translateX(-67%);
+//
+//	@include media-query($large) {
+//		transform: translateX(-53%);
+//	}
+//}
 
 #neo-n {
 	position: absolute;
@@ -140,7 +138,7 @@ $strip-height: 6rem;
 	right: -55px;
 	width: 64px;
 	height: 94px;
-	
+
 	@include media-query($medium) {
 		position: absolute;
 		top: -14px;

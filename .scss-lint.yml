@@ -35,7 +35,7 @@ linters:
     enabled: true
 
   Comment:
-    enabled: true
+    enabled: false
     style: silent
 
   DebugStatement:
@@ -80,7 +80,7 @@ linters:
     enabled: true
 
   IdSelector:
-    enabled: true
+    enabled: false
 
   ImportantRule:
     enabled: true
@@ -150,6 +150,7 @@ linters:
       - flex-grow
       - flex-order
       - flex-pack
+      - align-content
       - align-items
       - align-self
       - justify-content
@@ -193,6 +194,8 @@ linters:
       - font-emphasize-position
       - font-emphasize-style
       - font-smooth
+      - font-feature-settings
+      - font-kerning
       - hyphens
       - text-align
       - text-align-last
@@ -207,9 +210,9 @@ linters:
       - text-overflow
       - text-overflow-ellipsis
       - text-overflow-mode
-      - text-shadow
       - text-transform
       - text-wrap
+      - text-shadow
       - -webkit-text-size-adjust
       - letter-spacing
       - word-break
@@ -223,27 +226,6 @@ linters:
       - list-style-position
       - list-style-type
       - list-style-image
-      - pointer-events
-      - touch-action
-      - cursor
-      - visibility
-      - zoom
-      - table-layout
-      - empty-cells
-      - caption-side
-      - border-spacing
-      - border-collapse
-      - content
-      - quotes
-      - counter-reset
-      - counter-increment
-      - resize
-      - user-select
-      - nav-index
-      - nav-up
-      - nav-right
-      - nav-down
-      - nav-left
       -
       - color
       - background
@@ -296,6 +278,30 @@ linters:
       - outline-offset
       - box-shadow
       - opacity
+      -
+      - pointer-events
+      - touch-action
+      - cursor
+      - visibility
+      - zoom
+      - table-layout
+      - empty-cells
+      - caption-side
+      - border-spacing
+      - border-collapse
+      - content
+      - quotes
+      - counter-reset
+      - counter-increment
+      - resize
+      - user-select
+      - nav-index
+      - nav-up
+      - nav-right
+      - nav-down
+      - nav-left
+
+      -
       - transition
       - transition-delay
       - transition-timing-function
@@ -431,7 +437,11 @@ linters:
     enabled: true
     identifier_list: base
     additional_identifiers: []
-    excluded_identifiers: []
+    excluded_identifiers: [
+      'text-size-adjust',
+      'osx-font-smoothing',
+      'font-smoothing'
+    ]
 
   ZeroUnit:
     enabled: true

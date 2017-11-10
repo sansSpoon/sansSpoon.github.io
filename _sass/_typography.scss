@@ -1,32 +1,32 @@
 // Non Structural Typography
 
 h1, h2, h3, h4, h5, h6 {
-	color: $x11Grey;
 	margin-top: 0;
 	margin-bottom: .5rem;
+	color: $x11-grey;
 }
 
 h1 {
 	font-family: "EurostileExtTwo", $root-font-family;
 	font-size: 1.75rem;
-	font-weight: 700;
 	line-height: 1;
+	font-weight: 700;
 	text-transform: uppercase;
 }
 
 h2 {
 	font-family: "EurostileExtTwo", $root-font-family;
 	font-size: 1.5rem;
-	font-weight: 400;
 	line-height: 1;
+	font-weight: 400;
 	text-transform: uppercase;
 }
 
 h3 {
 	font-family: "Exo 2 Bold Expanded", $root-font-family;
 	font-size: 1.25rem;
-	font-weight: 700;
 	line-height: 1.25;
+	font-weight: 700;
 	text-transform: uppercase;
 }
 
@@ -46,9 +46,9 @@ strong {
 }
 
 ol, ul, dl {
+	padding-left: 1rem;
 	margin-top: 0;
 	margin-bottom: 1rem;
-	padding-left: 1rem;
 }
 
 ol ol, ul ul, ol ul, ul ol {
@@ -56,21 +56,21 @@ ol ol, ul ul, ol ul, ul ol {
 }
 
 dt {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 dd {
-  margin-bottom: .5rem;
+	margin-bottom: .5rem;
 }
 
 abbr {
 	font-size: 73%;
-	text-transform: uppercase;
 	font-weight: bold;
+	text-transform: uppercase;
 	&[title] {
-		cursor: help;
 		text-decoration: none;
 		border-bottom: 1px dotted $platinum;
+		cursor: help;
 	}
 }
 
@@ -79,13 +79,12 @@ ruby {
 }
 
 code, pre {
-	font-family: "OCRA", $root-mono-family
+	font-family: "OCRA", $root-mono-family;
 }
 
 .hyphenate {
-	word-break: break-all;
-	word-break: break-word;
 	hyphens: auto;
+	word-break: break-all;
 }
 
 .ellipsis {
@@ -93,9 +92,10 @@ code, pre {
 }
 
 .note {
-	padding: 0.5rem 0.25rem 0.5rem 1.5rem;
+	padding: .5rem .25rem .5rem 1.5rem;
 	margin: 1rem 0;
 	color: darken($color-txt, 10%);
+	background-color: darken($taupe, 1%);
 	background-image: repeating-linear-gradient(
 		45deg,
 		$taupe,
@@ -103,19 +103,18 @@ code, pre {
 		darken($taupe, 10%) 3px,
 		darken($taupe, 10%) 6px
 	);
-	background-color: darken($taupe, 1%);
-	background-size: 9px 100%;
 	background-repeat: no-repeat;
+	background-size: 9px 100%;
 
 	p:first-child {
 		margin-top: 0;
 	}
-	
+
 	p:last-child {
 		margin-bottom: 0;
 	}
 }
 .note::before {
-	content: "NOTE: ";
 	font-weight: 700;
+	content: "NOTE: ";
 }

@@ -12,8 +12,8 @@
 html, body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, dd, figure {
-	margin: 0;
 	padding: 0;
+	margin: 0;
 }
 
 html {
@@ -24,29 +24,29 @@ html {
 	@include media-query($small) {
 		font-size: $root-font-size * 1.25;
 	};
-	
+
 	@include media-query($medium) {
 		font-size: $root-font-size * 1.5;
 	};
-	
+
 	@include media-query($large) {
 		font-size: $root-font-size * 2.5;
 	};
 }
 
 body {
-	color: $color-txt;
-	background: darken($color-bg,10%) url(/assets/chrome/randomHexOpacityTileNormaliseLightMin.svg) repeat fixed;
-	text-rendering: optimizeLegibility;
 	font-feature-settings: "kern" 1, "liga" 1, "dlig" 1, "swsh" 1;
+	color: $color-txt;
+	background: darken($color-bg,10%) url("/assets/chrome/randomHexOpacityTileNormaliseLightMin.svg") repeat fixed;
+	text-rendering: optimizeLegibility;
 	-webkit-text-size-adjust: 100%;
-	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
 }
 
 a {
-	color: $color-link;
 	text-decoration: none;
+	color: $color-link;
 
 	// `:focus` is linked to `:hover` for basic accessibility
 	&:hover,
@@ -56,16 +56,16 @@ a {
 }
 
 img {
-	max-width: 100%;
 	display: block;
+	max-width: 100%;
 }
 
 table {
 	width: 100%;
-	border: 1px solid $color-txt;
-	border-collapse: collapse;
 	margin-top: .25em;
 	margin-bottom: .25em;
+	border: 1px solid $color-txt;
+	border-collapse: collapse;
 }
 
 td, th {

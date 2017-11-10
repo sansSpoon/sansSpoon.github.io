@@ -21,41 +21,43 @@ main {
 	display: flex;
 	justify-content: center;
 	padding-top: 1em;
-	
+
 	a {
-		color: transparentize($wpOrange, 0.37);
+		color: transparentize($wp-orange, .37);
 	}
-	
+
 	section {
 		position: relative;
 		z-index: 0;
 		width: 80%;
 		padding: .5rem .25rem;
+		font-size: .75em;
 		text-align: center;
 		background-color: darken($color-bg,10%);
-		font-size: .75em;
 	}
-	
+
 	section::before {
 		position: absolute;
 		z-index: -1;
-		left: -2em; top: 0; width: 2em; height: 100%;
-		border-radius: 6px 0 0 0;
-		content: "";
-		transform-origin: bottom left;
-		transform: skew(-31deg);
+		top: 0; left: -2em;
+		width: 2em; height: 100%;
 		background-color: darken($color-bg,10%);
+		border-radius: 6px 0 0;
+		content: "";
+		transform: skew(-31deg);
+		transform-origin: bottom left;
 	}
-	
+
 	section::after {
 		position: absolute;
 		z-index: -1;
-		right: -2em; top: 0; width: 2em; height: 100%;
+		top: 0; right: -2em;
+		width: 2em; height: 100%;
+		background-color: darken($color-bg,10%);
 		border-radius: 0 6px 0 0;
 		content: "";
-		transform-origin: bottom left;
 		transform: skew(31deg);
-		background-color: darken($color-bg,10%);
+		transform-origin: bottom left;
 	}
 }
 
@@ -64,12 +66,12 @@ main {
 // ---------------
 
 .post-title a {
-	color: $x11Grey;
+	color: $x11-grey;
 	transition: all .25s;
-	
+
 	&:hover {
 		text-decoration: none;
-		color: lighten($x11Grey,13%);
+		color: lighten($x11-grey,13%);
 	}
 }
 
@@ -77,19 +79,19 @@ main {
 	position: relative;
 	width: 100%;
 	height: 11px;
-	margin: 0 -0.25em 1.5em -0.25em;
-	
+	margin: 0 -.25em 1.5em;
+
 	@include media-query($small) {
 		height: 16px;
 	}
-	
+
 	@include media-query($large) {
 		height: 22px;
 	}
 }
 
 .posts>ul>li {
-	margin: 0 0 1.5em 0;
+	margin: 0 0 1.5em;
 }
 
 
@@ -116,18 +118,17 @@ main {
 }
 
 .post-title::after {
+	position: absolute;
 	z-index: -1;
-	transform: translate(-2rem,-50%);
+	top: 50%; left: 0;
 	display: block;
-	position:absolute;
-	font-size: 2em;
-	content: attr(data-title);
-	color: transparentize($nickle,0.83);
-	line-height: 1;
-	top: 50%;
-	left: 0;
 	width: 200%;
+	font-size: 2em;
+	line-height: 1;
+	color: transparentize($nickle, .83);
 	filter: blur(2px);
+	content: attr(data-title);
+	transform: translate(-2rem, -50%);
 }
 
 .post-meta, .tag-cloud {
@@ -162,83 +163,83 @@ main {
 
 .post-body h2::after {
 	position: absolute;
-	right: -2.75em; top: -5%; width: 2em; height: 110%;
+	top: -5%; right: -2.75em;
+	width: 2em; height: 110%;
+	background-color: transparentize($wp-orange,.63);
 	border-radius: 4px;
 	content: "";
-	transform-origin: top left;
 	transform: skew(-13deg);
-	background-color: transparentize($wpOrange,.63);
+	transform-origin: top left;
 }
 
 .related {
-	font-family: "EurostileExtTwo", $root-font-family;
 	margin: 3em 0 2em;
+	font-family: "EurostileExtTwo", $root-font-family;
 }
 
 .related-title {
 	display: inline-flex;
 	padding-right: 18px;
-	margin-bottom: 1em;
 	margin-right: -1.5rem;
+	margin-bottom: 1em;
 	margin-left: -1.5rem;
-	background: url(/assets/chrome/neo-n-related.svg) right center no-repeat;
+	background: url("/assets/chrome/neo-n-related.svg") right center no-repeat;
 	background-size: auto 100%;
-	
+
 	@include media-query($medium) {
 		padding-right: 26px;
 	}
 	@include media-query($large) {
 		padding-right: 40px;
 	}
-	
+
 	h3 {
 		display: inline-flex;
 		padding: .5em 0 .3em 1.5rem;
 		margin-bottom: 0;
-		color: $taupe;
-		background-color: $nickle;
 		font-family: inherit;
 		line-height: 1;
 		font-weight: 700;
+		color: $taupe;
+		background-color: $nickle;
 	}
 }
 
 .related-posts {
 	text-transform: uppercase;
 	list-style: none;
-	
+
 	li {
 		a {
-			color: transparentize($wpOrange, 0.37);
+			color: transparentize($wp-orange, .37);
 		}
 		&::before {
 			display: inline-block;
 			width: 1em;
 			margin-left: -1em;
+			color: transparentize($wp-orange, .37);
 			content: "\25AF";
-			color: transparentize($wpOrange, 0.37);
 		}
 	}
 }
 
-/* paragraph sign-off. Disabling, can't effectively select last para without javascript.
-.post>section p:last-of-type::after {
-	position: relative;
-	top: 0.4em;
-	padding-left: .2em;
-	content: url(/assets/chrome/neo-n-stop.svg);
-	
-	@include media-query($small) {
-		top: 0.25em;
-	}
-	@include media-query($medium) {
-		top: 0.12em;
-	}
-	@include media-query($large) {
-		top: 0;
-	}
-}
-*/
+// // paragraph sign-off. Disabling, can't effectively select last para without javascript.
+//.post>section p:last-of-type::after {
+//	position: relative;
+//	top: 0.4em;
+//	padding-left: .2em;
+//	content: url(/assets/chrome/neo-n-stop.svg);
+//
+//	@include media-query($small) {
+//		top: 0.25em;
+//	}
+//	@include media-query($medium) {
+//		top: 0.12em;
+//	}
+//	@include media-query($large) {
+//		top: 0;
+//	}
+//}
 
 
 // ! Tags
@@ -264,13 +265,13 @@ main {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-content: center;
-	padding: 0.25em 0.75em 0 0.75em;
+	justify-content: center;
+	padding: .25em .75em 0;
+	margin-right: .25em;
+	margin-bottom: .25em;
 	border-radius: 2px;
-	margin-right: 0.25em;
-	margin-bottom: 0.25em;
-	
+
 	@include media-query($medium) {
 		border-radius: 3px;
 	}
@@ -282,12 +283,12 @@ main {
 %tag-after {
 	position: absolute;
 	z-index: -1;
-	left: 0; top: 0; width: 100%; height: 100%;
+	top: 0; left: 0; width: 100%; height: 100%;
 	border-radius: 2px;
 	content: "";
-	transform-origin: bottom left;
 	transform: skew(-31deg);
-	
+	transform-origin: bottom left;
+
 	@include media-query($medium) {
 		border-radius: 3px;
 	}
@@ -299,38 +300,38 @@ main {
 .post-tags .tag, .tag-cloud .tag {
 	@extend %tag;
 	background: $nickle;
-	transform-origin: bottom left;
 	transform: skew(-31deg);
-	
+	transform-origin: bottom left;
+
 	a {
-		color: $color-bg;
 		text-decoration: none;
+		color: $color-bg;
 		transform: skew(31deg);
 	}
 }
 
 .post-meta>time {
 	@extend %tag;
-	background: $wpOrange;
 	color: $color-bg;
+	background: $wp-orange;
 }
 
-.post-meta>time:after {
+.post-meta>time::after {
 	@extend %tag-after;
-	background: $wpOrange;
+	background: $wp-orange;
 }
 
 .post-tags .first-tag, .tag-cloud .first-tag {
 	@extend %tag;
 	background: $nickle;
-	
+
 	a {
-		color: $color-bg;
 		text-decoration: none;
+		color: $color-bg;
 	}
 }
 
-.post-tags .first-tag:after, .tag-cloud .first-tag:after {
+.post-tags .first-tag::after, .tag-cloud .first-tag::after {
 	@extend %tag-after;
 	background: $nickle;
 }
@@ -339,14 +340,14 @@ main {
 	display: none;
 	font-family: "EurostileExtTwo", $root-font-family;
 	text-transform: uppercase;
-	
+
 	a {
-		font-size: 0.8rem;
+		font-size: .8rem;
 		text-decoration: none;
-		color: $wpOrange;
+		color: $wp-orange;
 	}
-	a:before {
-		content: '\25b2\00a0';
+	a::before {
+		content: "\25b2\00a0";
 	}
 }
 
