@@ -31,8 +31,16 @@
 	src: local("Exo 2 Bold Expanded"), local("Exo2-BoldExpanded"), url("/assets/font/Exo2-BoldExpanded.woff") format("woff");
 }
 
+@font-face {
+	font-family: "Exo 2 Semi Bold Expanded";
+	font-style: normal;
+	font-weight: 600;
+	src: local("Exo 2 Semi Bold Expanded"), local("Exo2-SemiBoldExpanded"), url("/assets/font/Exo2-SemiBoldExpanded.woff") format("woff");
+}
 
-// Body
+
+// Body Regular
+/*
 @font-face {
 	font-family: "Exo 2";
 	font-style: normal;
@@ -59,6 +67,36 @@
 	font-style: italic;
 	font-weight: 700;
 	src: local("Exo 2 Bold Italic"), local("Exo2-BoldItalic"), url("/assets/font/Exo2-BoldItalic.woff") format("woff");
+}
+*/
+
+// Body Light
+@font-face {
+	font-family: "Exo 2 Light";
+	font-style: normal;
+	font-weight: 400;
+	src: local("Exo 2 Light"), local("Exo2-Light"), url("/assets/font/Exo2-Light.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Exo 2 Light";
+	font-style: italic;
+	font-weight: 400;
+	src: local("Exo 2 Light Italic"), local("Exo2-LightItalic"), url("/assets/font/Exo2-LightItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Exo 2 Light";
+	font-style: normal;
+	font-weight: 700;
+	src: local("Exo 2 Semi Bold"), local("Exo2-SemiBold"), url("/assets/font/Exo2-SemiBold.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Exo 2 Light";
+	font-style: italic;
+	font-weight: 700;
+	src: local("Exo 2 Semi Bold Italic"), local("Exo2-SemiBoldItalic"), url("/assets/font/Exo2-SemiBoldItalic.woff") format("woff");
 }
 
 // Monospace

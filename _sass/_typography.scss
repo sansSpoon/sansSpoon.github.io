@@ -23,15 +23,15 @@ h2 {
 }
 
 h3 {
-	font-family: "Exo 2 Bold Expanded", $root-font-family;
+	font-family: "Exo 2 Semi Bold Expanded", $root-font-family;
 	font-size: 1.25rem;
 	line-height: 1.25;
-	font-weight: 700;
+	font-weight: 600;
 	text-transform: uppercase;
 }
 
 h4, h5, h6 {
-	font-family: "Exo 2", $root-font-family;
+	font-family: "Exo 2 Light", $root-font-family;
 	font-size: 1rem;
 	font-weight: 700;
 }
@@ -41,8 +41,8 @@ p {
 	margin-bottom: 1rem;
 }
 
-strong {
-	color: lighten($platinum, 20%);
+strong, em {
+	color: lighten($color-txt, 5%);
 }
 
 ol, ul, dl {
