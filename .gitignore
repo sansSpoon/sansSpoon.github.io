@@ -4,6 +4,7 @@ _site
 _drafts
 _posts
 _dev
+_blog
 .ruby-version
 .sass-cache
 .jekyll-metadata
