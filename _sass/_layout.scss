@@ -354,3 +354,41 @@ main {
 h2:target + .taglist .return {
 	display: block;
 }
+
+
+// ! Code Figures
+// ---------------
+.code-figure {
+	margin-bottom: 1rem;
+	pre {
+		//padding: .25em .25em .25em .5em;
+		margin-bottom: .25rem;
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	p {
+		margin-bottom: .5rem;
+	}
+
+	li {
+		&::before {
+			display: inline-block;
+			width: 1.25em;
+			margin-left: -1.25em;
+			color: transparentize($wp-orange, .57);
+			content: "\25AE";
+		}
+	}
+	li li {
+		&::before {
+			display: inline-block;
+			width: 1.25em;
+			margin-left: -1.25em;
+			color: transparentize($nickle, .57);
+			content: "\25AE";
+		}
+	}
+}
