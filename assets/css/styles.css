@@ -553,6 +553,14 @@ h2:target + .taglist .return {
     color: rgba(122, 116, 97, 0.43);
     content: "\25AE"; }
 
+.japanese-figure {
+  margin-bottom: 1rem;
+  font-size: 1.5em; }
+  .japanese-figure p {
+    margin-bottom: 0; }
+  .japanese-figure figcaption {
+    font-size: .5em; }
+
 .site-header-bg {
   z-index: -1;
   height: 6rem;

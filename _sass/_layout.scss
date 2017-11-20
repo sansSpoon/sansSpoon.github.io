@@ -356,7 +356,7 @@ h2:target + .taglist .return {
 }
 
 
-// ! Code Figures
+// ! Figures
 // ---------------
 .code-figure {
 	margin-bottom: 1rem;
@@ -395,5 +395,18 @@ h2:target + .taglist .return {
 			color: transparentize($nickle, .57);
 			content: "\25AE";
 		}
+	}
+}
+
+.japanese-figure {
+	margin-bottom: 1rem;
+	font-size: 1.5em;
+	
+	p {
+		margin-bottom: 0;
+	}
+
+	figcaption {
+		font-size: .5em;
 	}
 }
