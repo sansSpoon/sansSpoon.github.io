@@ -360,11 +360,11 @@ h2:target + .taglist .return {
 // ---------------
 .code-figure {
 	margin-bottom: 1rem;
-	
+
 	figcaption {
 		font-size: inherit;
 	}
-	
+
 	pre {
 		//padding: .25em .25em .25em .5em;
 		margin-bottom: .25rem;
@@ -401,7 +401,7 @@ h2:target + .taglist .return {
 .japanese-figure {
 	margin-bottom: 1rem;
 	font-size: 1.5em;
-	
+
 	p {
 		margin-bottom: 0;
 	}
@@ -409,4 +409,53 @@ h2:target + .taglist .return {
 	figcaption {
 		font-size: .5em;
 	}
+}
+
+
+// ! Notes
+// ---------------
+.note {
+	padding: .5rem .25rem .5rem 1.5rem;
+	margin: 1rem 0;
+	color: darken($color-txt, 10%);
+	background-color: darken($taupe, 1%);
+	background-image: repeating-linear-gradient(
+		45deg,
+		$taupe,
+		$taupe 3px,
+		darken($taupe, 10%) 3px,
+		darken($taupe, 10%) 6px
+	);
+	background-repeat: no-repeat;
+	background-size: 9px 100%;
+
+	p:first-child {
+		margin-top: 0;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+.note::before {
+	font-weight: 700;
+	content: "NOTE: ";
+}
+
+// ! Keyboard
+// ---------------
+kbd {
+	display: inline;
+	padding: .1em .6em;
+	margin: 0 .1em;
+	font-family: $root-mono-family;
+	font-size: .75em;
+	line-height: 1;
+	text-shadow: 0 1px 0 darken($taupe, 10%);
+	white-space: nowrap;
+	background-color: lighten($taupe, 13%);
+	border: 1px solid darken($taupe, 10%);
+	border-radius: 3px;
+	box-shadow: 0 2px 0 transparentize(darken($taupe, 11%),.57), 0 1px 0 1px transparentize(lighten($taupe, 43%),.57) inset;
+
 }

@@ -100,31 +100,3 @@ code, pre {
 .ellipsis {
 	text-overflow: ellipsis;
 }
-
-.note {
-	padding: .5rem .25rem .5rem 1.5rem;
-	margin: 1rem 0;
-	color: darken($color-txt, 10%);
-	background-color: darken($taupe, 1%);
-	background-image: repeating-linear-gradient(
-		45deg,
-		$taupe,
-		$taupe 3px,
-		darken($taupe, 10%) 3px,
-		darken($taupe, 10%) 6px
-	);
-	background-repeat: no-repeat;
-	background-size: 9px 100%;
-
-	p:first-child {
-		margin-top: 0;
-	}
-
-	p:last-child {
-		margin-bottom: 0;
-	}
-}
-.note::before {
-	font-weight: 700;
-	content: "NOTE: ";
-}
