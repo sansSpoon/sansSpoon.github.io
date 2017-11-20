@@ -360,6 +360,11 @@ h2:target + .taglist .return {
 // ---------------
 .code-figure {
 	margin-bottom: 1rem;
+	
+	figcaption {
+		font-size: inherit;
+	}
+	
 	pre {
 		//padding: .25em .25em .25em .5em;
 		margin-bottom: .25rem;

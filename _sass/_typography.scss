@@ -80,6 +80,14 @@ ruby {
 	font-family: "Mplus", $root-font-family;
 }
 
+figure {
+	margin-bottom: 1rem;
+}
+
+figcaption {
+	font-size: .75em;
+}
+
 code, pre {
 	font-family: "OCRA", $root-mono-family;
 }
