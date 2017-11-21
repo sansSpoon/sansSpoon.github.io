@@ -387,12 +387,21 @@ h2:target + .taglist .return {
 			content: "\25AE";
 		}
 	}
-	li li {
+	li ul li {
 		&::before {
 			display: inline-block;
 			width: 1.25em;
 			margin-left: -1.25em;
-			color: transparentize($nickle, .57);
+			color: transparentize($nickle, .51);
+			content: "\25AE";
+		}
+	}
+	li ul li ul li {
+		&::before {
+			display: inline-block;
+			width: 1.25em;
+			margin-left: -1.25em;
+			color: transparentize($platinum, .73);
 			content: "\25AE";
 		}
 	}
