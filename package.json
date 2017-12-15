@@ -17,21 +17,17 @@
 		"css:prefix": "postcss assets/css/styles.css --use autoprefixer --replace",
 		"css:watch": "watch 'npm run css' _sass/",
 		"css:watch-quick": "sass --watch _sass/styles.scss:assets/css/styles.css --sourcemap=auto --style nested",
-		
 		"docs": "./_build/_syncContent.sh",
 		"docs:draft": "./_build/_syncContent.sh dft",
 		"docs:posts": "./_build/_syncContent.sh pst",
 		"docs:sample": "./_build/_syncContent.sh spl",
 		"docs:watch": "watch './_build/_syncContent.sh' ~/Documents/_blog/",
 		"docs:watch-posts": "watch './_build/_syncContent.sh pst' ~/Documents/_blog/",
-		
 		"jekyll:dev": "jekyll serve --host 192.168.2.69 --drafts",
 		"jekyll:dist": "JEKYLL_ENV=production jekyll build",
-		
 		"dev": "npm-run-all --parallel css:watch-quick docs:watch jekyll:dev",
 		"dev:all": "npm-run-all --parallel css:watch docs:watch jekyll:dev",
-		
-		"dist": "npm run css && npm run docs:posts && npm run jekyll:dist"
+		"dist": "bundle && npm run css && npm run docs:posts && npm run jekyll:dist"
 	},
 	"repository": {
 		"type": "git",
@@ -47,5 +43,11 @@
 		"not IE < 200",
 		"iOS >= 7",
 		"Safari >= 7"
-	]
+	],
+	"devDependencies": {
+		"autoprefixer": "^7.2.3",
+		"npm-run-all": "^4.1.2",
+		"postcss-cli": "^4.1.1",
+		"watch": "^1.0.2"
+	}
 }
