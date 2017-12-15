@@ -387,6 +387,7 @@ h2:target + .taglist .return {
 			content: "\25AE";
 		}
 	}
+	// scss-lint:disable all
 	li ul li {
 		&::before {
 			display: inline-block;
@@ -405,6 +406,7 @@ h2:target + .taglist .return {
 			content: "\25AE";
 		}
 	}
+	// scss-lint:enable all
 }
 
 .japanese-figure {
