@@ -1,5 +1,5 @@
 // ! Main
-// ---------------
+// ----------
 
 main {
 	overflow: hidden;
@@ -63,7 +63,7 @@ main {
 
 
 // ! Home
-// ---------------
+// ----------
 
 .post-title a {
 	color: $x11-grey;
@@ -96,7 +96,7 @@ main {
 
 
 // ! Posts
-// ---------------
+// -----------
 
 .posts, .tags, .related {
 	ul {
@@ -243,7 +243,7 @@ main {
 
 
 // ! Tags
-// ---------------
+// ----------
 .tags {
 	header {
 		margin-bottom: 2em;
@@ -357,7 +357,7 @@ h2:target + .taglist .return {
 
 
 // ! Figures
-// ---------------
+// -------------
 .code-figure {
 	margin-bottom: 1rem;
 
@@ -424,7 +424,7 @@ h2:target + .taglist .return {
 
 
 // ! Notes
-// ---------------
+// -----------
 .note {
 	padding: .5rem .25rem .5rem 1.5rem;
 	margin: 1rem 0;
@@ -454,7 +454,7 @@ h2:target + .taglist .return {
 }
 
 // ! Keyboard
-// ---------------
+// --------------
 kbd {
 	display: inline;
 	padding: .1em .6em;
@@ -469,4 +469,28 @@ kbd {
 	border-radius: 3px;
 	box-shadow: 0 2px 0 transparentize(darken($taupe, 11%),.57), 0 1px 0 1px transparentize(lighten($taupe, 43%),.57) inset;
 
+}
+
+// ! Table
+// -----------
+table {
+	border: 0;
+}
+
+td, th {
+	padding: .25em 1em .5em;
+	line-height: 1;
+	text-align: left;
+	vertical-align: baseline;
+	border: 0;
+}
+
+tr {
+	&:nth-child(even) {
+		background-color: darken($taupe, 3%);
+	}
+}
+
+th {
+	background-color: darken($taupe, 6%);
 }
