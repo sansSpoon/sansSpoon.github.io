@@ -23,6 +23,7 @@ lqd,liquid
 mac,macos
 mgt,magento
 mgo,mongo
+mgs,mongoose
 nde,node
 npm,npm
 nix,unix
