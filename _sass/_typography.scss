@@ -77,7 +77,14 @@ abbr {
 }
 
 ruby {
+	display: inline-flex;
+	flex-direction: column-reverse;
 	font-family: "Mplus", $root-font-family;
+}
+
+rb, rt {
+	display: inline;
+	line-height: 1;
 }
 
 figure {
